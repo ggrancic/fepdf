@@ -40,6 +40,9 @@
 					<mainClass>com.fepdf.fepdf.Fepdf</mainClass>
 				</transformer>
 			  </transformers>
+                          <nonFilteredFileExtensions>
+                                <nonFilteredFileExtension>ttf</nonFilteredFileExtension>
+                          </nonFilteredFileExtensions>
 			</configuration>
 		      </execution>
 		  </executions>

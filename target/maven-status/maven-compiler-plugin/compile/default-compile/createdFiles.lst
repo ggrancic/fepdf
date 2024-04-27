@@ -1,4 +1,4 @@
-com\fepdf\fepdf\controlador\ControllerMainFrame.class
-com\fepdf\fepdf\vista\MainFrame.class
-com\fepdf\fepdf\Fepdf.class
-com\fepdf\fepdf\modelo\Persona.class
+com/fepdf/fepdf/modelo/Persona.class
+com/fepdf/fepdf/controlador/ControllerMainFrame.class
+com/fepdf/fepdf/vista/MainFrame.class
+com/fepdf/fepdf/Fepdf.class
