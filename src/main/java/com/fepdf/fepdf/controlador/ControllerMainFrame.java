@@ -105,7 +105,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad() + ", " + persona.getPais());
+           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
            tboxProv.setValue(persona.getProvincia());
            tboxPais.setValue(persona.getPais());
            tboxTelefono.setValue(persona.getTelefono());
@@ -152,7 +152,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad() + ", " + persona.getPais());
+           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
            tboxProv.setValue(persona.getProvincia());
            tboxPais.setValue(persona.getPais());
            tboxTelefono.setValue(persona.getTelefono());
@@ -202,7 +202,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad() + ", " + persona.getPais());
+           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
            tboxProv.setValue(persona.getProvincia());
            tboxPais.setValue(persona.getPais());
            tboxTelefono.setValue(persona.getTelefono());
@@ -251,7 +251,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
            tboxFN.setValue(persona.getFechaNacimiento());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad() + ", " + persona.getPais());
+           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
            tboxTel.setValue(persona.getTelefono());
            tboxMail.setValue(persona.getEmail());
            tboxDNI.setValue("DNI: " + persona.getDNI());
