@@ -15,6 +15,9 @@ public class Persona {
     private String email;
     private String fechaNacimiento;
     private String consulado;
+    private String ciudadNacimiento;
+    private String provinciaNacimiento;
+    private String paisNacimiento;
 
     public String getNombres() {
         return nombres;
@@ -127,6 +130,32 @@ public class Persona {
     public void setConsulado(String consulado) {
         this.consulado = consulado;
     }
+
+    public String getCiudadNacimiento() {
+        return ciudadNacimiento;
+    }
+
+    public void setCiudadNacimiento(String ciudadNacimiento) {
+        this.ciudadNacimiento = ciudadNacimiento;
+    }
+
+    public String getProvinciaNacimiento() {
+        return provinciaNacimiento;
+    }
+
+    public void setProvinciaNacimiento(String provinciaNacimiento) {
+        this.provinciaNacimiento = provinciaNacimiento;
+    }
+
+    public String getPaisNacimiento() {
+        return paisNacimiento;
+    }
+
+    public void setPaisNacimiento(String paisNacimiento) {
+        this.paisNacimiento = paisNacimiento;
+    }
+    
+    
     
     
 }

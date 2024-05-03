@@ -71,6 +71,10 @@ public class ControllerMainFrame implements ActionListener {
         persona.setFechaNacimiento(df.format(this.vista.getCampoFN().getDate()));
         
         persona.setConsulado(this.vista.getCampoConsulado().getText().toUpperCase());
+        
+        persona.setCiudadNacimiento(this.vista.getCampoCN().getText().toUpperCase());
+        persona.setProvinciaNacimiento(this.vista.getCampoPrN().getText().toUpperCase());
+        persona.setPaisNacimiento(this.vista.getCampoPN().getText().toUpperCase());
         return persona;
     }
     
@@ -244,6 +248,7 @@ public class ControllerMainFrame implements ActionListener {
            PDField tboxMail = docAcroForm.getField("MailDecl");
            PDField tboxDNI = docAcroForm.getField("DocumentoDecl");
            PDField tboxCons = docAcroForm.getField("LugarFecha");
+           PDField tboxLN = docAcroForm.getField("LugarNacimiento");
            
            tboxNombre.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -256,6 +261,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxMail.setValue(persona.getEmail());
            tboxDNI.setValue("DNI: " + persona.getDNI());
            tboxCons.setValue(persona.getConsulado());
+           tboxLN.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvinciaNacimiento() + ", " + persona.getPaisNacimiento());
            
            docHoja.save(this.crearCarpeta(persona) + "/InscripNacimiento.pdf");
            docHoja.close();
@@ -295,8 +301,8 @@ public class ControllerMainFrame implements ActionListener {
            tboxMN.setValue(persona.getFechaNacimiento().substring(3,5));
            tboxAN.setValue(persona.getFechaNacimiento().substring(6, 10));
            
-           tboxCiudad.setValue(persona.getCiudad());
-           tboxProv.setValue(persona.getProvincia() + (" (ARGENTINA)"));
+           tboxCiudad.setValue(persona.getCiudadNacimiento());
+           tboxProv.setValue(persona.getProvinciaNacimiento() + " (" + persona.getPaisNacimiento() + ")");
            tboxConsulado.setValue(persona.getConsulado());
            
            
@@ -327,6 +333,7 @@ public class ControllerMainFrame implements ActionListener {
            PDField tboxMail = docAcroForm.getField("tBoxMail");
            PDField tboxC1 = docAcroForm.getField("Text Box 1_41");
            PDField tboxC2 = docAcroForm.getField("Text Box 1_42");
+           PDField tboxDN = docAcroForm.getField("tBoxDomicilio");
            
            tboxNom.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -336,6 +343,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxMail.setValue(persona.getEmail());
            tboxC1.setValue(persona.getConsulado());
            tboxC2.setValue(persona.getConsulado());
+           tboxDN.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvinciaNacimiento() + ", " + persona.getPaisNacimiento());
            
            docSoli.save(this.crearCarpeta(persona) + "/SolicitudInscripcionResidente.pdf");
            docSoli.close();
