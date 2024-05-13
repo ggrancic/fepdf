@@ -384,5 +384,8 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.getCampoEmail().setText("");
         this.vista.getCampoFN().setCalendar(null);
         this.vista.getCampoConsulado().setText("");
+        this.vista.getCampoCN().setText("");
+        this.vista.getCampoPrN().setText("");
+        this.vista.getCampoPN().setText("");
     }
 }

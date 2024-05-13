@@ -148,7 +148,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblPN = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FEPDF - Version 1.0.1");
+        setTitle("FEPDF - Version 1.0.2");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imgs/logo-fe2.jpg")));
         setResizable(false);
 
