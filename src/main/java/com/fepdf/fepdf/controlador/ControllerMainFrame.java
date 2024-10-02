@@ -375,7 +375,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
            tboxFN.setValue(persona.getFechaNacimiento());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           tboxDom.setValue(persona.getCalle());
            tboxCP.setValue(this.vista.campoCP.getText());
            tboxTel.setValue(persona.getTelefono());
            tboxMail.setValue(persona.getEmail().toLowerCase());
@@ -632,14 +632,14 @@ public class ControllerMainFrame implements ActionListener {
                SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
                String fechaN2 = sdf.format(this.vista.campoFNH2.getDate());
 
-               dd1h1.setValue(String.valueOf(fechaN2.charAt(0)));
-               dd2h1.setValue(String.valueOf(fechaN2.charAt(1)));
-               dm1h1.setValue(String.valueOf(fechaN2.charAt(2)));
-               dm2h1.setValue(String.valueOf(fechaN2.charAt(3)));
-               da1h1.setValue(String.valueOf(fechaN2.charAt(4)));
-               da2h1.setValue(String.valueOf(fechaN2.charAt(5)));
-               da3h1.setValue(String.valueOf(fechaN2.charAt(6)));
-               da4h1.setValue(String.valueOf(fechaN2.charAt(7)));
+               dd1h2.setValue(String.valueOf(fechaN2.charAt(0)));
+               dd2h2.setValue(String.valueOf(fechaN2.charAt(1)));
+               dm1h2.setValue(String.valueOf(fechaN2.charAt(2)));
+               dm2h2.setValue(String.valueOf(fechaN2.charAt(3)));
+               da1h2.setValue(String.valueOf(fechaN2.charAt(4)));
+               da2h2.setValue(String.valueOf(fechaN2.charAt(5)));
+               da3h2.setValue(String.valueOf(fechaN2.charAt(6)));
+               da4h2.setValue(String.valueOf(fechaN2.charAt(7)));
            }
            
            nh3.setValue(this.vista.campoNH3.getText().toUpperCase());
