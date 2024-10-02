@@ -14,10 +14,14 @@ public class Persona {
     private String telefono;
     private String email;
     private String fechaNacimiento;
+    private String fechaTurno;
     private String consulado;
     private String ciudadNacimiento;
     private String provinciaNacimiento;
     private String paisNacimiento;
+    private String munEsp;
+    private String provEsp;
+    private String sexo;
 
     public String getNombres() {
         return nombres;
@@ -153,6 +157,38 @@ public class Persona {
 
     public void setPaisNacimiento(String paisNacimiento) {
         this.paisNacimiento = paisNacimiento;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getFechaTurno() {
+        return fechaTurno;
+    }
+
+    public void setFechaTurno(String fechaTurno) {
+        this.fechaTurno = fechaTurno;
+    }
+
+    public String getMunEsp() {
+        return munEsp;
+    }
+
+    public void setMunEsp(String munEsp) {
+        this.munEsp = munEsp;
+    }
+
+    public String getProvEsp() {
+        return provEsp;
+    }
+
+    public void setProvEsp(String provEsp) {
+        this.provEsp = provEsp;
     }
     
     

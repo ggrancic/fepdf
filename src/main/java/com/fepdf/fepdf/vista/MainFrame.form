@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="FEPDF - Version 1.0.2"/>
+    <Property name="title" type="java.lang.String" value="FEPDF - Version 1.1"/>
     <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
       <Connection code="Toolkit.getDefaultToolkit().getImage(getClass().getResource(&quot;/imgs/logo-fe2.jpg&quot;))" type="code"/>
     </Property>
@@ -23,7 +30,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-112,0,0,3,32"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,3,0,0,3,77"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -75,326 +82,1361 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="pnlCentral">
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
           <BorderConstraints direction="Center"/>
         </Constraint>
       </Constraints>
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblA2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblEC" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCalle" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblProvincia" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCN" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPN" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="campoNombres" pref="200" max="32767" attributes="0"/>
-                              <Component id="campoA2" max="32767" attributes="0"/>
-                              <Component id="campoEC" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoCalle" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoProvincia" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoCN" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoTelefono" alignment="1" max="32767" attributes="0"/>
-                              <Component id="campoPN" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="labelFn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="campoFN" min="-2" pref="150" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblA1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDNI" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNacio" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="campoDNI" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="campoNacio" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="campoA1" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblPrN" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pnlCentral">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Persona">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Persona"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblA2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblEC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblCalle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblProvincia" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="campoNombres" max="32767" attributes="0"/>
+                                          <Component id="campoA2" max="32767" attributes="0"/>
+                                          <Component id="campoCalle" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="campoTelefono" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="comboEC" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="campoProvincia" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="campoCP" min="-2" pref="64" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblConsulado" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelFn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelFn1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="campoFT" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="campoFN" min="-2" pref="150" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPais" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblCiudad" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="43" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblA1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblDNI" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblNacio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="campoDNI" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="campoNacio" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="campoA1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblConsulado" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblPais" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblCiudad" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="comboSx" min="-2" max="-2" attributes="0"/>
+                                          <Component id="campoCiudad" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="campoPais" min="-2" max="-2" attributes="0"/>
+                                          <Component id="campoEmail" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="campoConsulado" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
+                              <EmptySpace pref="103" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoCiudad" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="campoPais" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoEmail" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="campoConsulado" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="campoPrN" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblCN" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="campoCN" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="campoPE" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblPN" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="campoPN" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblPrN" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblME" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="campoME" pref="200" max="32767" attributes="0"/>
+                                          <Component id="campoPrN" pref="200" max="32767" attributes="0"/>
+                                          <Component id="comboEstudios" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="128" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="btnFin" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="100" max="32767" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnFin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoA1" alignment="1" min="-2" max="-2" attributes="0"/>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="campoA1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoNombres" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="campoNombres" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoA2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblA2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblEC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="comboEC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="campoDNI" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="campoNacio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNacio" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="campoA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDNI" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblEC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoEC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="campoDNI" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="campoNacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNacio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCalle" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoCalle" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblProvincia" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoProvincia" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblPais" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoPais" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblConsulado" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelFn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoConsulado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCalle" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoCalle" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoCiudad" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="campoFN" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="campoCN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblPrN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="campoPrN" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace pref="21" max="32767" attributes="0"/>
-                          <Component id="btnFin" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblProvincia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoProvincia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPais" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoPais" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoCP" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="campoPN" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelFn" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoFN" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="comboSx" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblConsulado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoConsulado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelFn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="campoFT" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblCN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoCN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPrN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoPrN" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoPN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblME" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoME" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoPE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="comboEstudios" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnFin" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblNombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre(s)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoNombres">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblA1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido Paterno"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoA1">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblA2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido Materno"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoA2">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblEC">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Estado Civil"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoEC">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblNacio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nacionalidad"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoNacio">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblDNI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DNI"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoDNI">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCalle">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Calle (c/altura)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoCalle">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCiudad">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ciudad"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoCiudad">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblProvincia">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Provincia"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoProvincia">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblPais">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pais"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoPais">
-          <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[200, 22]"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblTelefono">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Telefono"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoCN">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblEmail">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Email"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoEmail">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelFn">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de Nacimiento"/>
-          </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="campoFN">
-          <Properties>
-            <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblConsulado">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Consulado"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoPrN">
-        </Component>
-        <Component class="javax.swing.JButton" name="btnFin">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Finalizar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoTelefono">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCN">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ciudad de Nacimiento"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoConsulado">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblPrN">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Provincia de Nacimiento"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campoPN">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblPN">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pais de Nacimiento"/>
-          </Properties>
-        </Component>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblNombre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre(s)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNombres">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblA1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellido Paterno"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoA1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblA2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellido Materno"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoA2">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEC">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNacio">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNacio">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblDNI">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DNI"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoDNI">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCalle">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calle (c/altura)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoCalle">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCiudad">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ciudad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoCiudad">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblProvincia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Provincia"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoProvincia">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[100, 23]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPais">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pais"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoPais">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[200, 22]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblTelefono">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoCN">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEmail">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoEmail">
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelFn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFN">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblConsulado">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulado"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoPrN">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnFin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Finalizar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoTelefono">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+54 9"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCN">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ciudad de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoConsulado">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPrN">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Provincia de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoPN">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPN">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pais de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sexo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboSx">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Masculino"/>
+                    <StringItem index="1" value="Femenino"/>
+                  </StringArray>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[150, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelFn1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha del Turno"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFT">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblME">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Municipio Espa&#xf1;ol"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoME">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Provincia Espa&#xf1;ola"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoPE">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboEC">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Soltero"/>
+                    <StringItem index="1" value="Casado"/>
+                    <StringItem index="2" value="Divorciado"/>
+                    <StringItem index="3" value="Viudo"/>
+                    <StringItem index="4" value="Separado"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estudios"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboEstudios">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Primaria / Secundaria"/>
+                    <StringItem index="1" value="Terciario"/>
+                    <StringItem index="2" value="Universitario"/>
+                    <StringItem index="3" value="No Consta"/>
+                    <StringItem index="4" value=" "/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CP"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoCP">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlNacimiento">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos del Nacimiento">
+                <Property name="tabTitle" type="java.lang.String" value="Datos del Nacimiento"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelCheck12" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCheck14" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="campoRC" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="campoHN" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="labelCheck13" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="campoFI" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="campoTomo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="campoPagina" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="lblNro" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="campoNroPag" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="116" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelCheck12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoHN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="campoFI" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCheck13" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="lblNro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNroPag" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoPagina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelCheck14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoRC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoTomo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="344" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelCheck12">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hora del Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck13">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Inscripcion"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFI">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck14">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registro Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoRC">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[200, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tomo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoTomo">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pagina"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoPagina">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNro">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNroPag">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoHN">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="00:00"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlProgenitores">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Progenitores">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Progenitores"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="labelCheck1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="combo1" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace pref="611" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="combo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="385" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelCheck1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#xbf;Padres Casados?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="combo1">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="SI"/>
+                    <StringItem index="1" value="NO"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlContacto">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Contactos">
+                <Property name="tabTitle" type="java.lang.String" value="Contactos"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="labelCheck8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="campoCony" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="labelCheck7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="campoTC2" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="labelCheck6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="campoDC2" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelCheck2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelCheck3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="campoDC1" max="32767" attributes="0"/>
+                                  <Component id="campoNC" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelCheck4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelCheck5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="campoTC1" max="32767" attributes="0"/>
+                                  <Component id="campoNC2" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="426" pref="471" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoNC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoDC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoTC1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoNC2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoDC2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoTC2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoCony" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="175" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelCheck2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Contacto 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNC">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion Contacto 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoDC1">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono Contacto 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoTC1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+54 9"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Contacto 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNC2">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion Contacto 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoDC2">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono Contacto 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoTC2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+54 9"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Conyuge/Pareja"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoCony">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlHijos">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Hijos">
+                <Property name="tabTitle" type="java.lang.String" value="Hijos"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelCheck19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelCheck20" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="campoLNH3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="campoNH3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelCheck21" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="campoFNH3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelCheck9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelCheck10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="campoLNH1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="campoNH1" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelCheck11" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="campoFNH1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelCheck24" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="campoFNH4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelCheck22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelCheck23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="27" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="campoNH4" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="campoLNH4" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelCheck16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelCheck17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="campoLNH2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="campoNH2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelCheck18" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="campoFNH2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelCheck25" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="campoNH5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelCheck26" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="campoLNH5" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelCheck27" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="campoFNH5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoNH1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCheck22" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoNH4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoLNH1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCheck23" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoLNH4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelCheck11" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoFNH1" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCheck24" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoFNH4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelCheck16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoNH2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelCheck17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoLNH2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelCheck18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoFNH2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelCheck25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoNH5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelCheck26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoLNH5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelCheck27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoFNH5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoNH3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelCheck20" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoLNH3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelCheck21" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoFNH3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelCheck9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Hijo 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNH1">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento Hijo 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoLNH1">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck11">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento Hijo 1"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFNH1">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNH2">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck16">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Hijo 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck17">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento Hijo 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoLNH2">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFNH2">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck18">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento Hijo 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Hijo 3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNH3">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoLNH3">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck20">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento Hijo 3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento Hijo 3"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFNH3">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck22">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Hijo 4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNH4">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck23">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento Hijo 4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoLNH4">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFNH4">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck24">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento Hijo 4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre Hijo 5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoNH5">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck26">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento Hijo 5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="campoLNH5">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 23]"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCheck27">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Nacimiento Hijo 5"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="campoFNH5">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

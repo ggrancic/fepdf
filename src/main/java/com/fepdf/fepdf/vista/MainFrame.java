@@ -3,6 +3,7 @@ package com.fepdf.fepdf.vista;
 import com.toedter.calendar.JDateChooser;
 import java.awt.Toolkit;
 import java.io.File;
+import java.util.Locale;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -33,10 +34,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     public JTextField getCampoNombres() {
         return campoNombres;
-    }
-
-    public JTextField getCampoEC() {
-        return campoEC;
     }
 
     public JTextField getCampoNacio() {
@@ -107,9 +104,11 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup2 = new javax.swing.ButtonGroup();
         pnlSuperior = new javax.swing.JPanel();
         txtPnlSuperior = new javax.swing.JLabel();
         logoEmpresa = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         pnlCentral = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         campoNombres = new javax.swing.JTextField();
@@ -118,7 +117,6 @@ public class MainFrame extends javax.swing.JFrame {
         lblA2 = new javax.swing.JLabel();
         campoA2 = new javax.swing.JTextField();
         lblEC = new javax.swing.JLabel();
-        campoEC = new javax.swing.JTextField();
         lblNacio = new javax.swing.JLabel();
         campoNacio = new javax.swing.JTextField();
         lblDNI = new javax.swing.JLabel();
@@ -146,9 +144,84 @@ public class MainFrame extends javax.swing.JFrame {
         lblPrN = new javax.swing.JLabel();
         campoPN = new javax.swing.JTextField();
         lblPN = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        comboSx = new javax.swing.JComboBox<>();
+        labelFn1 = new javax.swing.JLabel();
+        campoFT = new com.toedter.calendar.JDateChooser();
+        lblME = new javax.swing.JLabel();
+        campoME = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        campoPE = new javax.swing.JTextField();
+        comboEC = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        comboEstudios = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        campoCP = new javax.swing.JTextField();
+        pnlNacimiento = new javax.swing.JPanel();
+        labelCheck12 = new javax.swing.JLabel();
+        labelCheck13 = new javax.swing.JLabel();
+        campoFI = new com.toedter.calendar.JDateChooser();
+        labelCheck14 = new javax.swing.JLabel();
+        campoRC = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        campoTomo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        campoPagina = new javax.swing.JTextField();
+        lblNro = new javax.swing.JLabel();
+        campoNroPag = new javax.swing.JTextField();
+        campoHN = new javax.swing.JTextField();
+        pnlProgenitores = new javax.swing.JPanel();
+        labelCheck1 = new javax.swing.JLabel();
+        combo1 = new javax.swing.JComboBox<>();
+        pnlContacto = new javax.swing.JPanel();
+        labelCheck2 = new javax.swing.JLabel();
+        campoNC = new javax.swing.JTextField();
+        labelCheck3 = new javax.swing.JLabel();
+        campoDC1 = new javax.swing.JTextField();
+        labelCheck4 = new javax.swing.JLabel();
+        campoTC1 = new javax.swing.JTextField();
+        labelCheck5 = new javax.swing.JLabel();
+        campoNC2 = new javax.swing.JTextField();
+        labelCheck6 = new javax.swing.JLabel();
+        campoDC2 = new javax.swing.JTextField();
+        labelCheck7 = new javax.swing.JLabel();
+        campoTC2 = new javax.swing.JTextField();
+        labelCheck8 = new javax.swing.JLabel();
+        campoCony = new javax.swing.JTextField();
+        pnlHijos = new javax.swing.JPanel();
+        labelCheck9 = new javax.swing.JLabel();
+        campoNH1 = new javax.swing.JTextField();
+        labelCheck10 = new javax.swing.JLabel();
+        campoLNH1 = new javax.swing.JTextField();
+        labelCheck11 = new javax.swing.JLabel();
+        campoFNH1 = new com.toedter.calendar.JDateChooser();
+        campoNH2 = new javax.swing.JTextField();
+        labelCheck16 = new javax.swing.JLabel();
+        labelCheck17 = new javax.swing.JLabel();
+        campoLNH2 = new javax.swing.JTextField();
+        campoFNH2 = new com.toedter.calendar.JDateChooser();
+        labelCheck18 = new javax.swing.JLabel();
+        labelCheck19 = new javax.swing.JLabel();
+        campoNH3 = new javax.swing.JTextField();
+        campoLNH3 = new javax.swing.JTextField();
+        labelCheck20 = new javax.swing.JLabel();
+        labelCheck21 = new javax.swing.JLabel();
+        campoFNH3 = new com.toedter.calendar.JDateChooser();
+        labelCheck22 = new javax.swing.JLabel();
+        campoNH4 = new javax.swing.JTextField();
+        labelCheck23 = new javax.swing.JLabel();
+        campoLNH4 = new javax.swing.JTextField();
+        campoFNH4 = new com.toedter.calendar.JDateChooser();
+        labelCheck24 = new javax.swing.JLabel();
+        labelCheck25 = new javax.swing.JLabel();
+        campoNH5 = new javax.swing.JTextField();
+        labelCheck26 = new javax.swing.JLabel();
+        campoLNH5 = new javax.swing.JTextField();
+        labelCheck27 = new javax.swing.JLabel();
+        campoFNH5 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FEPDF - Version 1.0.2");
+        setTitle("FEPDF - Version 1.1");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imgs/logo-fe2.jpg")));
         setResizable(false);
 
@@ -184,6 +257,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         lblProvincia.setText("Provincia");
 
+        campoProvincia.setPreferredSize(new java.awt.Dimension(100, 23));
+
         lblPais.setText("Pais");
 
         campoPais.setPreferredSize(new java.awt.Dimension(200, 22));
@@ -200,11 +275,34 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnFin.setText("Finalizar");
 
+        campoTelefono.setText("+54 9");
+
         lblCN.setText("Ciudad de Nacimiento");
 
         lblPrN.setText("Provincia de Nacimiento");
 
         lblPN.setText("Pais de Nacimiento");
+
+        jLabel1.setText("Sexo");
+
+        comboSx.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+        comboSx.setPreferredSize(new java.awt.Dimension(150, 23));
+
+        labelFn1.setText("Fecha del Turno");
+
+        campoFT.setDateFormatString("dd/MM/yyyy");
+
+        lblME.setText("Municipio Español");
+
+        jLabel2.setText("Provincia Española");
+
+        comboEC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltero", "Casado", "Divorciado", "Viudo", "Separado" }));
+
+        jLabel3.setText("Estudios");
+
+        comboEstudios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Primaria / Secundaria", "Terciario", "Universitario", "No Consta", " " }));
+
+        jLabel4.setText("CP");
 
         javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
         pnlCentral.setLayout(pnlCentralLayout);
@@ -215,66 +313,94 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCentralLayout.createSequentialGroup()
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblA2)
-                            .addComponent(lblNombre)
-                            .addComponent(lblEC)
-                            .addComponent(lblCalle)
-                            .addComponent(lblProvincia)
-                            .addComponent(lblTelefono)
-                            .addComponent(lblCN)
-                            .addComponent(lblPN))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(campoNombres, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(campoA2)
-                            .addComponent(campoEC)
-                            .addComponent(campoCalle)
-                            .addComponent(campoProvincia)
-                            .addComponent(campoCN)
-                            .addComponent(campoTelefono, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(campoPN)))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addComponent(labelFn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoFN, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblA1)
-                            .addComponent(lblDNI)
-                            .addComponent(lblNacio))
-                        .addGap(48, 48, 48)
-                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(campoDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoA1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                                    .addComponent(lblPrN)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                .addGroup(pnlCentralLayout.createSequentialGroup()
-                                    .addComponent(lblConsulado)
-                                    .addGap(79, 79, 79)))
                             .addGroup(pnlCentralLayout.createSequentialGroup()
                                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblA2)
+                                    .addComponent(lblNombre)
+                                    .addComponent(lblEC)
+                                    .addComponent(lblCalle)
+                                    .addComponent(lblProvincia)
+                                    .addComponent(lblTelefono))
+                                .addGap(36, 36, 36)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(campoNombres)
+                                    .addComponent(campoA2)
+                                    .addComponent(campoCalle)
+                                    .addComponent(campoTelefono, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(comboEC, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(pnlCentralLayout.createSequentialGroup()
+                                        .addComponent(campoProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(campoCP, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelFn)
+                                    .addComponent(labelFn1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoFT, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoFN, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblA1)
+                                    .addComponent(lblDNI)
+                                    .addComponent(lblNacio))
+                                .addGap(48, 48, 48)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(campoDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoA1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblConsulado)
                                     .addComponent(lblEmail)
                                     .addComponent(lblPais)
-                                    .addComponent(lblCiudad))
-                                .addGap(98, 98, 98)))
+                                    .addComponent(lblCiudad)
+                                    .addComponent(jLabel1))
+                                .addGap(84, 84, 84)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(comboSx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoConsulado, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(103, Short.MAX_VALUE))
+                    .addGroup(pnlCentralLayout.createSequentialGroup()
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addComponent(lblCN)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoCN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pnlCentralLayout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(campoPE, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnlCentralLayout.createSequentialGroup()
+                                    .addComponent(lblPN)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(campoPN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoConsulado, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoPrN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(100, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnFin)
-                .addGap(21, 21, 21))
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblPrN)
+                                    .addComponent(lblME)
+                                    .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(campoME, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(campoPrN, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(comboEstudios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 128, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnFin)
+                                .addGap(21, 21, 21))))))
         );
         pnlCentralLayout.setVerticalGroup(
             pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,7 +422,8 @@ public class MainFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEC)
-                            .addComponent(campoEC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(comboEC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(3, 3, 3))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
                         .addComponent(campoDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -314,40 +441,481 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(lblProvincia)
                     .addComponent(campoProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPais)
-                    .addComponent(campoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(campoCP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTelefono)
                     .addComponent(lblEmail)
                     .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblConsulado)
-                        .addComponent(labelFn)
-                        .addComponent(campoConsulado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(campoFN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoCN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCN)
-                    .addComponent(lblPrN)
-                    .addComponent(campoPrN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                        .addComponent(btnFin)
-                        .addGap(18, 18, 18))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelFn)
+                            .addComponent(campoFN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlCentralLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboSx, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblConsulado)
+                                .addComponent(campoConsulado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelFn1))
+                            .addComponent(campoFT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(9, 9, 9)
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCN)
+                    .addComponent(campoCN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPrN)
+                    .addComponent(campoPrN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPN)
+                    .addComponent(campoPN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblME)
+                    .addComponent(campoME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCentralLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campoPN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPN))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel2)
+                            .addComponent(campoPE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(comboEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFin)
+                        .addContainerGap())))
         );
 
-        getContentPane().add(pnlCentral, java.awt.BorderLayout.CENTER);
+        jTabbedPane1.addTab("Datos Persona", pnlCentral);
+
+        labelCheck12.setText("Hora del Nacimiento");
+
+        labelCheck13.setText("Fecha de Inscripcion");
+
+        campoFI.setDateFormatString("dd/MM/yyyy");
+
+        labelCheck14.setText("Registro Civil");
+
+        campoRC.setPreferredSize(new java.awt.Dimension(200, 23));
+
+        jLabel5.setText("Tomo");
+
+        jLabel6.setText("Pagina");
+
+        lblNro.setText("Nro");
+
+        campoHN.setText("00:00");
+
+        javax.swing.GroupLayout pnlNacimientoLayout = new javax.swing.GroupLayout(pnlNacimiento);
+        pnlNacimiento.setLayout(pnlNacimientoLayout);
+        pnlNacimientoLayout.setHorizontalGroup(
+            pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCheck12)
+                    .addComponent(labelCheck14))
+                .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(campoRC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(campoHN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
+                .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                        .addComponent(labelCheck13)
+                        .addGap(18, 18, 18)
+                        .addComponent(campoFI, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoTomo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoPagina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblNro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoNroPag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(116, Short.MAX_VALUE))
+        );
+        pnlNacimientoLayout.setVerticalGroup(
+            pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNacimientoLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelCheck12)
+                        .addComponent(campoHN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoFI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCheck13))
+                .addGap(18, 18, 18)
+                .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblNro)
+                        .addComponent(campoNroPag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(campoPagina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelCheck14)
+                        .addComponent(campoRC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5)
+                        .addComponent(campoTomo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(344, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos del Nacimiento", pnlNacimiento);
+
+        labelCheck1.setText("¿Padres Casados?");
+
+        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SI", "NO" }));
+
+        javax.swing.GroupLayout pnlProgenitoresLayout = new javax.swing.GroupLayout(pnlProgenitores);
+        pnlProgenitores.setLayout(pnlProgenitoresLayout);
+        pnlProgenitoresLayout.setHorizontalGroup(
+            pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProgenitoresLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(labelCheck1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(611, Short.MAX_VALUE))
+        );
+        pnlProgenitoresLayout.setVerticalGroup(
+            pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProgenitoresLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck1)
+                    .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(385, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos Progenitores", pnlProgenitores);
+
+        labelCheck2.setText("Nombre Contacto 1");
+
+        campoNC.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck3.setText("Direccion Contacto 1");
+
+        campoDC1.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck4.setText("Telefono Contacto 1");
+
+        campoTC1.setText("+54 9");
+        campoTC1.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck5.setText("Nombre Contacto 2");
+
+        campoNC2.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck6.setText("Direccion Contacto 2");
+
+        campoDC2.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck7.setText("Telefono Contacto 2");
+
+        campoTC2.setText("+54 9");
+        campoTC2.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck8.setText("Conyuge/Pareja");
+
+        campoCony.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        javax.swing.GroupLayout pnlContactoLayout = new javax.swing.GroupLayout(pnlContacto);
+        pnlContacto.setLayout(pnlContactoLayout);
+        pnlContactoLayout.setHorizontalGroup(
+            pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContactoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlContactoLayout.createSequentialGroup()
+                        .addComponent(labelCheck8)
+                        .addGap(41, 41, 41)
+                        .addComponent(campoCony, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlContactoLayout.createSequentialGroup()
+                        .addComponent(labelCheck7)
+                        .addGap(18, 18, 18)
+                        .addComponent(campoTC2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlContactoLayout.createSequentialGroup()
+                        .addComponent(labelCheck6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoDC2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlContactoLayout.createSequentialGroup()
+                        .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCheck2)
+                            .addComponent(labelCheck3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(campoDC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoNC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(pnlContactoLayout.createSequentialGroup()
+                        .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCheck4)
+                            .addComponent(labelCheck5))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoTC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoNC2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(426, 471, Short.MAX_VALUE))
+        );
+        pnlContactoLayout.setVerticalGroup(
+            pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContactoLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck2)
+                    .addComponent(campoNC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck3)
+                    .addComponent(campoDC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck4)
+                    .addComponent(campoTC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck5)
+                    .addComponent(campoNC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck6)
+                    .addComponent(campoDC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck7)
+                    .addComponent(campoTC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlContactoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck8)
+                    .addComponent(campoCony, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(175, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Contactos", pnlContacto);
+
+        labelCheck9.setText("Nombre Hijo 1");
+
+        campoNH1.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck10.setText("Lugar de Nacimiento Hijo 1");
+
+        campoLNH1.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck11.setText("Fecha de Nacimiento Hijo 1");
+
+        campoFNH1.setDateFormatString("dd/MM/yyyy");
+
+        campoNH2.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck16.setText("Nombre Hijo 2");
+
+        labelCheck17.setText("Lugar de Nacimiento Hijo 2");
+
+        campoLNH2.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        campoFNH2.setDateFormatString("dd/MM/yyyy");
+
+        labelCheck18.setText("Fecha de Nacimiento Hijo 2");
+
+        labelCheck19.setText("Nombre Hijo 3");
+
+        campoNH3.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        campoLNH3.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck20.setText("Lugar de Nacimiento Hijo 3");
+
+        labelCheck21.setText("Fecha de Nacimiento Hijo 3");
+
+        campoFNH3.setDateFormatString("dd/MM/yyyy");
+
+        labelCheck22.setText("Nombre Hijo 4");
+
+        campoNH4.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck23.setText("Lugar de Nacimiento Hijo 4");
+
+        campoLNH4.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        campoFNH4.setDateFormatString("dd/MM/yyyy");
+
+        labelCheck24.setText("Fecha de Nacimiento Hijo 4");
+
+        labelCheck25.setText("Nombre Hijo 5");
+
+        campoNH5.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck26.setText("Lugar de Nacimiento Hijo 5");
+
+        campoLNH5.setPreferredSize(new java.awt.Dimension(220, 23));
+
+        labelCheck27.setText("Fecha de Nacimiento Hijo 5");
+
+        campoFNH5.setDateFormatString("dd/MM/yyyy");
+
+        javax.swing.GroupLayout pnlHijosLayout = new javax.swing.GroupLayout(pnlHijos);
+        pnlHijos.setLayout(pnlHijosLayout);
+        pnlHijosLayout.setHorizontalGroup(
+            pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHijosLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCheck19)
+                            .addComponent(labelCheck20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(campoLNH3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoNH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addComponent(labelCheck21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoFNH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCheck9)
+                                    .addComponent(labelCheck10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(campoLNH1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(campoNH1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoFNH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoFNH4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHijosLayout.createSequentialGroup()
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCheck22)
+                                    .addComponent(labelCheck23))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                                        .addComponent(campoNH4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(campoLNH4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCheck16)
+                                    .addComponent(labelCheck17))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(campoLNH2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(campoNH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoFNH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck25)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(campoNH5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck26)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoLNH5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pnlHijosLayout.createSequentialGroup()
+                                .addComponent(labelCheck27)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoFNH5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(15, 15, 15)))
+                .addGap(15, 15, 15))
+        );
+        pnlHijosLayout.setVerticalGroup(
+            pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHijosLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck9)
+                    .addComponent(campoNH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCheck22)
+                    .addComponent(campoNH4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck10)
+                    .addComponent(campoLNH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCheck23)
+                    .addComponent(campoLNH4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCheck11)
+                    .addComponent(campoFNH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCheck24)
+                    .addComponent(campoFNH4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelCheck16)
+                            .addComponent(campoNH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelCheck17)
+                            .addComponent(campoLNH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCheck18)
+                            .addComponent(campoFNH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlHijosLayout.createSequentialGroup()
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelCheck25)
+                            .addComponent(campoNH5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelCheck26)
+                            .addComponent(campoLNH5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCheck27)
+                            .addComponent(campoFNH5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck19)
+                    .addComponent(campoNH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCheck20)
+                    .addComponent(campoLNH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlHijosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCheck21)
+                    .addComponent(campoFNH3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(105, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Hijos", pnlHijos);
+
+        getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
@@ -360,24 +928,94 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFin;
+    public javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JTextField campoA1;
     private javax.swing.JTextField campoA2;
     private javax.swing.JTextField campoCN;
+    public javax.swing.JTextField campoCP;
     private javax.swing.JTextField campoCalle;
     private javax.swing.JTextField campoCiudad;
     private javax.swing.JTextField campoConsulado;
+    public javax.swing.JTextField campoCony;
+    public javax.swing.JTextField campoDC1;
+    public javax.swing.JTextField campoDC2;
     private javax.swing.JTextField campoDNI;
-    private javax.swing.JTextField campoEC;
     private javax.swing.JTextField campoEmail;
+    public com.toedter.calendar.JDateChooser campoFI;
     private com.toedter.calendar.JDateChooser campoFN;
+    public com.toedter.calendar.JDateChooser campoFNH1;
+    public com.toedter.calendar.JDateChooser campoFNH2;
+    public com.toedter.calendar.JDateChooser campoFNH3;
+    public com.toedter.calendar.JDateChooser campoFNH4;
+    public com.toedter.calendar.JDateChooser campoFNH5;
+    public com.toedter.calendar.JDateChooser campoFT;
+    public javax.swing.JTextField campoHN;
+    public javax.swing.JTextField campoLNH1;
+    public javax.swing.JTextField campoLNH2;
+    public javax.swing.JTextField campoLNH3;
+    public javax.swing.JTextField campoLNH4;
+    public javax.swing.JTextField campoLNH5;
+    public javax.swing.JTextField campoME;
+    public javax.swing.JTextField campoNC;
+    public javax.swing.JTextField campoNC2;
+    public javax.swing.JTextField campoNH1;
+    public javax.swing.JTextField campoNH2;
+    public javax.swing.JTextField campoNH3;
+    public javax.swing.JTextField campoNH4;
+    public javax.swing.JTextField campoNH5;
     private javax.swing.JTextField campoNacio;
     private javax.swing.JTextField campoNombres;
-    private javax.swing.JTextField campoPN;
+    public javax.swing.JTextField campoNroPag;
+    public javax.swing.JTextField campoPE;
+    public javax.swing.JTextField campoPN;
+    public javax.swing.JTextField campoPagina;
     private javax.swing.JTextField campoPais;
     private javax.swing.JTextField campoPrN;
     private javax.swing.JTextField campoProvincia;
+    public javax.swing.JTextField campoRC;
+    public javax.swing.JTextField campoTC1;
+    public javax.swing.JTextField campoTC2;
     private javax.swing.JTextField campoTelefono;
+    public javax.swing.JTextField campoTomo;
+    public javax.swing.JComboBox<String> combo1;
+    public javax.swing.JComboBox<String> comboEC;
+    public javax.swing.JComboBox<String> comboEstudios;
+    public javax.swing.JComboBox<String> comboSx;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel labelCheck1;
+    private javax.swing.JLabel labelCheck10;
+    private javax.swing.JLabel labelCheck11;
+    private javax.swing.JLabel labelCheck12;
+    private javax.swing.JLabel labelCheck13;
+    private javax.swing.JLabel labelCheck14;
+    private javax.swing.JLabel labelCheck16;
+    private javax.swing.JLabel labelCheck17;
+    private javax.swing.JLabel labelCheck18;
+    private javax.swing.JLabel labelCheck19;
+    private javax.swing.JLabel labelCheck2;
+    private javax.swing.JLabel labelCheck20;
+    private javax.swing.JLabel labelCheck21;
+    private javax.swing.JLabel labelCheck22;
+    private javax.swing.JLabel labelCheck23;
+    private javax.swing.JLabel labelCheck24;
+    private javax.swing.JLabel labelCheck25;
+    private javax.swing.JLabel labelCheck26;
+    private javax.swing.JLabel labelCheck27;
+    private javax.swing.JLabel labelCheck3;
+    private javax.swing.JLabel labelCheck4;
+    private javax.swing.JLabel labelCheck5;
+    private javax.swing.JLabel labelCheck6;
+    private javax.swing.JLabel labelCheck7;
+    private javax.swing.JLabel labelCheck8;
+    private javax.swing.JLabel labelCheck9;
     private javax.swing.JLabel labelFn;
+    private javax.swing.JLabel labelFn1;
     private javax.swing.JLabel lblA1;
     private javax.swing.JLabel lblA2;
     private javax.swing.JLabel lblCN;
@@ -387,8 +1025,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblDNI;
     private javax.swing.JLabel lblEC;
     private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblME;
     private javax.swing.JLabel lblNacio;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNro;
     private javax.swing.JLabel lblPN;
     private javax.swing.JLabel lblPais;
     private javax.swing.JLabel lblPrN;
@@ -396,6 +1036,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JLabel logoEmpresa;
     private javax.swing.JPanel pnlCentral;
+    private javax.swing.JPanel pnlContacto;
+    private javax.swing.JPanel pnlHijos;
+    private javax.swing.JPanel pnlNacimiento;
+    private javax.swing.JPanel pnlProgenitores;
     private javax.swing.JPanel pnlSuperior;
     private javax.swing.JLabel txtPnlSuperior;
     // End of variables declaration//GEN-END:variables

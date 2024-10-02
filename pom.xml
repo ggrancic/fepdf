@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fepdf</groupId>
     <artifactId>fepdf</artifactId>
-    <version>1.0.2</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
     
     <build>
@@ -76,6 +76,12 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.7</version>
+        </dependency>
+        
+        <dependency>
+        <groupId>com.github.lgooddatepicker</groupId>
+        <artifactId>LGoodDatePicker</artifactId>
+        <version>11.2.1</version>
         </dependency>
     </dependencies>
 </project>
