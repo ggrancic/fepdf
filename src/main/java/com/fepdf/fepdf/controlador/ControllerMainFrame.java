@@ -427,6 +427,9 @@ public class ControllerMainFrame implements ActionListener {
            tboxA2.setValue(persona.getApellidoMaterno());
            tboxNombres.setValue(persona.getNombres());
            
+           tboxME.setValue(persona.getMunEsp().toUpperCase());
+           tboxPE.setValue(persona.getProvEsp().toUpperCase());
+           
            tboxDN.setValue(persona.getFechaNacimiento().substring(0, 2));
            tboxMN.setValue(persona.getFechaNacimiento().substring(3,5));
            tboxAN.setValue(persona.getFechaNacimiento().substring(6, 10));
