@@ -7,27 +7,21 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileSystemView;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
-import org.apache.pdfbox.pdmodel.interactive.form.PDChoice;
 import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDRadioButton;
@@ -67,7 +61,6 @@ public class ControllerMainFrame implements ActionListener {
         persona.setNombres(this.vista.getCampoNombres().getText().toUpperCase());
         persona.setApellidoPaterno(this.vista.getCampoA1().getText().toUpperCase());
         persona.setApellidoMaterno(this.vista.getCampoA2().getText().toUpperCase());
-        persona.setEstadoCivil(this.vista.comboEC.getSelectedItem().toString().toUpperCase());
         persona.setNacionalidad(this.vista.getCampoNacio().getText().toUpperCase());
         persona.setDNI(this.vista.getCampoDNI().getText().toUpperCase());
         persona.setCalle(this.vista.getCampoCalle().getText().toUpperCase());
@@ -93,6 +86,23 @@ public class ControllerMainFrame implements ActionListener {
         persona.setCiudadNacimiento(this.vista.getCampoCN().getText().toUpperCase());
         persona.setProvinciaNacimiento(this.vista.getCampoPrN().getText().toUpperCase());
         persona.setPaisNacimiento(this.vista.getCampoPN().getText().toUpperCase());
+        
+        
+        if ((this.vista.comboSx.getSelectedItem().toString()).equals("Femenino")) {
+            
+            String sourceString = this.vista.comboEC.getSelectedItem().toString().toUpperCase();
+            int lastChar = sourceString.length() - 1;
+            
+            StringBuilder sb = new StringBuilder(sourceString);
+            sb.setCharAt(lastChar, 'A');
+            
+            persona.setEstadoCivil(sb.toString());
+        } else {
+            persona.setEstadoCivil(this.vista.comboEC.getSelectedItem().toString().toUpperCase());
+        }
+        
+        
+        
         return persona;
     }
     
@@ -187,6 +197,9 @@ public class ControllerMainFrame implements ActionListener {
            PDField check3 = docAcroForm.getField("Casilla de verificación 12");
            PDField check4 = docAcroForm.getField("Casilla de verificación 13");
            PDField tboxOtros = docAcroForm.getField("Otros documentos");
+           PDField tboxDiaTurno = docAcroForm.getField("FirmaDIA");
+           PDField tboxMesTurno = docAcroForm.getField("FirmaMES");
+           PDField tboxAgnoTurno = docAcroForm.getField("FirmaAÑO");
            
            
            tboxRC.setValue(persona.getConsulado());
@@ -212,6 +225,14 @@ public class ControllerMainFrame implements ActionListener {
            tboxTelefono.setValue(persona.getTelefono());
            tboxEmail.setValue(persona.getEmail());
            tboxConsulado.setValue(persona.getConsulado());
+           
+           LocalDate fechaTurno = LocalDate.parse(persona.getFechaTurno());
+           
+           
+           tboxDiaTurno.setValue(fechaTurno.getDayOfMonth() + "");
+           tboxMesTurno.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
+           tboxAgnoTurno.setValue(fechaTurno.getYear() + "");
+           
            ((PDCheckBox) checkComun).check();
            ((PDCheckBox) check1).check();
            ((PDCheckBox) check2).check();
@@ -223,6 +244,8 @@ public class ControllerMainFrame implements ActionListener {
            } else {
                tboxOtros.setValue("AVERIGUAR");
            }
+           
+           
            
            docAnexo3.save(this.crearCarpeta(persona) + "/Anexo3.pdf");
            docAnexo3.close();
