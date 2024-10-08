@@ -362,6 +362,36 @@ public class ControllerMainFrame implements ActionListener {
            PDField tomo = docAcroForm.getField("Tomo");
            PDField pagina = docAcroForm.getField("Pagina");
            PDField numero = docAcroForm.getField("Numero");
+           PDField nombrePadre = docAcroForm.getField("NombreProgA");
+           PDField apellido1Padre = docAcroForm.getField("Apellido1ProgA");
+           PDField apellido2Padre = docAcroForm.getField("Apellido2ProgA");
+           PDField pp = docAcroForm.getField("Progenitor1ProgA");
+           PDField mp = docAcroForm.getField("Progenitor2ProgA");
+           PDField lnp = docAcroForm.getField("LugarNacProgA");
+           PDField dnp = docAcroForm.getField("DiaNacProgA");
+           PDField mnp = docAcroForm.getField("MesNacProgA");
+           PDField anp = docAcroForm.getField("AnioNacProgA");
+           PDField ecnp = docAcroForm.getField("EstadoCivilAlNacProg1");
+           PDField ecap = docAcroForm.getField("EstadoCivilActual");
+           PDField nnp = docAcroForm.getField("NacionalidadAlNacProgA");
+           PDField nap = docAcroForm.getField("NacionalidadActualProgA");
+           PDField domp = docAcroForm.getField("DomicilioProgA");
+           
+           PDField nombreMadre = docAcroForm.getField("NombreProgB");
+           PDField apellido1Madre = docAcroForm.getField("Apellido1ProgB");
+           PDField apellido2Madre = docAcroForm.getField("Apellido2ProgB");
+           PDField pm = docAcroForm.getField("Progenitor1ProgB");
+           PDField mm = docAcroForm.getField("Progenitor2ProgB");
+           PDField lnm = docAcroForm.getField("LugarNacProgB");
+           PDField dnm = docAcroForm.getField("DiaNacProgB");
+           PDField mnm = docAcroForm.getField("MesNacProgB");
+           PDField anm = docAcroForm.getField("AnioNacProgB");
+           PDField ecnm = docAcroForm.getField("EstadoCivilAlNacProg1");
+           PDField ecam = docAcroForm.getField("EstadoCivilActual");
+           PDField nnm = docAcroForm.getField("NacionalidadAlNacProgB");
+           PDField nam = docAcroForm.getField("NacionalidadActualProgB");
+           PDField domm = docAcroForm.getField("DomicilioProgB");
+           
            
            tboxNombre.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -394,6 +424,40 @@ public class ControllerMainFrame implements ActionListener {
            tomo.setValue(this.vista.campoTomo.getText());
            pagina.setValue(this.vista.campoPagina.getText());
            numero.setValue(this.vista.campoNroPag.getText());
+           
+           nombrePadre.setValue(this.vista.campoNomP.getText());
+           apellido1Padre.setValue(this.vista.campoApePadre1.getText());
+           apellido2Padre.setValue(this.vista.campoApePadre2.getText());
+           pp.setValue(this.vista.campoPP.getText());
+           mp.setValue(this.vista.campoMP.getText());
+           lnp.setValue(this.vista.campoNacP.getText());
+           nnp.setValue(this.vista.nacioNacP.getText());
+           nap.setValue(this.vista.nacioAcP.getText());
+           domp.setValue(this.vista.domP.getText());
+           
+           LocalDate fechaPadre = LocalDate.parse(df.format(this.vista.campoFNP.getDate()));
+           dnp.setValue(String.valueOf(fechaPadre.getDayOfMonth()));
+           mnp.setValue(fechaPadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
+           anp.setValue(String.valueOf(fechaPadre.getYear()));
+           ecnp.setValue(this.vista.comboEcNacP.getSelectedItem().toString());
+           ecap.setValue(this.vista.comboEcAcP.getSelectedItem().toString());
+           
+           nombreMadre.setValue(this.vista.campoNomM.getText());
+           apellido1Madre.setValue(this.vista.campoApeMadre.getText());
+           apellido2Madre.setValue(this.vista.campoApeMadre2.getText());
+           pm.setValue(this.vista.campoPM.getText());
+           mm.setValue(this.vista.campoMM.getText());
+           lnm.setValue(this.vista.campoNacM.getText());
+           nnm.setValue(this.vista.nacioNacM.getText());
+           nam.setValue(this.vista.nacioAcM.getText());
+           domm.setValue(this.vista.domP.getText());
+           
+           LocalDate fechaMadre = LocalDate.parse(df.format(this.vista.campoFNM.getDate()));
+           dnm.setValue(String.valueOf(fechaPadre.getDayOfMonth()));
+           mnm.setValue(fechaPadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
+           anm.setValue(String.valueOf(fechaPadre.getYear()));
+           ecnm.setValue(this.vista.comboEcNacP.getSelectedItem().toString());
+           ecam.setValue(this.vista.comboEcAcP.getSelectedItem().toString());
            
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
@@ -513,6 +577,9 @@ public class ControllerMainFrame implements ActionListener {
            PDField cont2 = docAcroForm.getField("tboxOtroContacto");
            PDField cony = docAcroForm.getField("tBoxConyuge");
            
+           PDField padre = docAcroForm.getField("tBoxNac_2");
+           PDField madre = docAcroForm.getField("tBoxNac_3");
+           
 
            //hijo 1
            PDField nh1 = docAcroForm.getField("tBoxH1");
@@ -626,6 +693,9 @@ public class ControllerMainFrame implements ActionListener {
            } else {
                ((PDCheckBox) checkNoConsta).check();
            }
+           
+           padre.setValue(this.vista.campoNomP.getText());
+           padre.setValue(this.vista.campoNomM.getText());
            
            tboxPE.setValue(persona.getMunEsp() + "  -  " + persona.getProvEsp());
            tboxConsOrig.setValue("ROSARIO  -  ARGENTINA");
