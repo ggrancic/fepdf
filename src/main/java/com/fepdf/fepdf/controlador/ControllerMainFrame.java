@@ -392,6 +392,14 @@ public class ControllerMainFrame implements ActionListener {
            PDField nam = docAcroForm.getField("NacionalidadActualProgB");
            PDField domm = docAcroForm.getField("DomicilioProgB");
            
+           PDField existeMatri = docAcroForm.getField("ExisteMatrimonio");
+           PDField diaMatri = docAcroForm.getField("DiaMatrimonio");
+           PDField mesMatri = docAcroForm.getField("MesMatrimonio");
+           PDField anioMatri = docAcroForm.getField("AnioMatrimonio");
+           PDField lugarCeleb = docAcroForm.getField("LugarMatrimonio");
+           PDField inscrito = docAcroForm.getField("LugarInscripMatrimonio");
+           PDField docuMatri = docAcroForm.getField("DocumentoMatrimonio");
+           
            
            tboxNombre.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -477,6 +485,17 @@ public class ControllerMainFrame implements ActionListener {
            DiaFecha.setValue(String.valueOf(fechaTurno.getDayOfMonth()));
            MesFecha.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
            AnioFecha.setValue(String.valueOf(fechaTurno.getYear()).substring(1));
+           
+           if (this.vista.combo1.getSelectedItem().toString().equals("SI")) {
+               existeMatri.setValue("EXISTE");
+               LocalDate fechaMatri = LocalDate.parse(dfes.format(this.vista.fechaMatri.getDate()));
+               diaMatri.setValue(this.numeroADia(fechaMatri.getDayOfMonth()).toUpperCase());
+               mesMatri.setValue(fechaMatri.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
+               anioMatri.setValue(String.valueOf(fechaMatri.getYear()));
+               lugarCeleb.setValue(this.vista.campoLugar.getText().toUpperCase());
+               inscrito.setValue(this.vista.inscripcion.getText().toUpperCase());
+               docuMatri.setValue("ACTA DE MATRIMONIO");
+           }
            
            docHoja.save(this.crearCarpeta(persona) + "/InscripNacimiento.pdf");
            docHoja.close();

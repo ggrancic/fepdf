@@ -171,8 +171,6 @@ public class MainFrame extends javax.swing.JFrame {
         campoNroPag = new javax.swing.JTextField();
         campoHN = new javax.swing.JTextField();
         pnlProgenitores = new javax.swing.JPanel();
-        labelCheck1 = new javax.swing.JLabel();
-        combo1 = new javax.swing.JComboBox<>();
         containerDataPadre = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         campoNomP = new javax.swing.JTextField();
@@ -223,6 +221,15 @@ public class MainFrame extends javax.swing.JFrame {
         nacioAcM = new javax.swing.JTextField();
         campoFNM = new com.toedter.calendar.JDateChooser();
         jLabel31 = new javax.swing.JLabel();
+        pnlNacimiento1 = new javax.swing.JPanel();
+        labelCheck30 = new javax.swing.JLabel();
+        combo1 = new javax.swing.JComboBox<>();
+        jLabel32 = new javax.swing.JLabel();
+        fechaMatri = new com.toedter.calendar.JDateChooser();
+        lblLugar = new javax.swing.JLabel();
+        campoLugar = new javax.swing.JTextField();
+        lblLugar1 = new javax.swing.JLabel();
+        inscripcion = new javax.swing.JTextField();
         pnlContacto = new javax.swing.JPanel();
         labelCheck2 = new javax.swing.JLabel();
         campoNC = new javax.swing.JTextField();
@@ -622,10 +629,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Datos del Nacimiento", pnlNacimiento);
 
-        labelCheck1.setText("¿Padres Casados?");
-
-        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SI", "NO" }));
-
         containerDataPadre.setBorder(javax.swing.BorderFactory.createTitledBorder("Padre"));
 
         jLabel7.setText("Nombre");
@@ -683,69 +686,69 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(containerDataPadreLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(containerDataPadreLayout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(campoNomP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(campoApePadre1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(containerDataPadreLayout.createSequentialGroup()
-                            .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerDataPadreLayout.createSequentialGroup()
-                                    .addComponent(jLabel13)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(comboEcNacP, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(containerDataPadreLayout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(campoPP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(containerDataPadreLayout.createSequentialGroup()
-                                    .addComponent(jLabel11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(campoMP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(containerDataPadreLayout.createSequentialGroup()
-                                    .addComponent(jLabel14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(comboEcAcP, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jLabel15)))))
                     .addGroup(containerDataPadreLayout.createSequentialGroup()
-                        .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerDataPadreLayout.createSequentialGroup()
-                                .addComponent(jLabel18)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(domP))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerDataPadreLayout.createSequentialGroup()
+                        .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoNomP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel8)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoApePadre1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                    .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, containerDataPadreLayout.createSequentialGroup()
+                                            .addComponent(jLabel13)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(comboEcNacP, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                            .addComponent(jLabel10)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(campoPP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                            .addComponent(jLabel11)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(campoMP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                            .addComponent(jLabel14)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(comboEcAcP, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel15)))))
+                            .addGroup(containerDataPadreLayout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nacioNacP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel17)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(containerDataPadreLayout.createSequentialGroup()
-                        .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel30))
+                                .addComponent(nacioNacP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel17)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(containerDataPadreLayout.createSequentialGroup()
-                                .addComponent(campoFNP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(campoNacP, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                    .addGroup(containerDataPadreLayout.createSequentialGroup()
-                        .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nacioAcP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel30))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                        .addComponent(campoFNP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(campoNacP, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                             .addGroup(containerDataPadreLayout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoApePadre2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 79, Short.MAX_VALUE)))
+                                .addGroup(containerDataPadreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nacioAcP, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(containerDataPadreLayout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(campoApePadre2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 79, Short.MAX_VALUE))))
+                    .addGroup(containerDataPadreLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(domP)))
                 .addContainerGap())
         );
         containerDataPadreLayout.setVerticalGroup(
@@ -946,32 +949,86 @@ public class MainFrame extends javax.swing.JFrame {
         pnlProgenitoresLayout.setHorizontalGroup(
             pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlProgenitoresLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(17, 17, 17)
                 .addGroup(pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(containerDataPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(pnlProgenitoresLayout.createSequentialGroup()
-                        .addComponent(labelCheck1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(containerDataMadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
         pnlProgenitoresLayout.setVerticalGroup(
             pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlProgenitoresLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(pnlProgenitoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCheck1)
-                    .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
                 .addComponent(containerDataPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(containerDataMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Datos Progenitores", pnlProgenitores);
+
+        labelCheck30.setText("¿Padres Casados?");
+
+        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SI", "NO" }));
+
+        jLabel32.setText("Fecha Celebracion");
+
+        fechaMatri.setDateFormatString("dd/MM/yyyy");
+
+        lblLugar.setText("Lugar");
+
+        campoLugar.setPreferredSize(new java.awt.Dimension(200, 23));
+
+        lblLugar1.setText("Inscrito en");
+
+        inscripcion.setPreferredSize(new java.awt.Dimension(200, 23));
+
+        javax.swing.GroupLayout pnlNacimiento1Layout = new javax.swing.GroupLayout(pnlNacimiento1);
+        pnlNacimiento1.setLayout(pnlNacimiento1Layout);
+        pnlNacimiento1Layout.setHorizontalGroup(
+            pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNacimiento1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlNacimiento1Layout.createSequentialGroup()
+                        .addComponent(labelCheck30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fechaMatri, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblLugar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlNacimiento1Layout.createSequentialGroup()
+                        .addComponent(lblLugar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(inscripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(70, Short.MAX_VALUE))
+        );
+        pnlNacimiento1Layout.setVerticalGroup(
+            pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNacimiento1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblLugar)
+                        .addComponent(campoLugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fechaMatri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelCheck30)
+                        .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel32)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlNacimiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLugar1)
+                    .addComponent(inscripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(441, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos del Matrimonio", pnlNacimiento1);
 
         labelCheck2.setText("Nombre Contacto 1");
 
@@ -1328,6 +1385,7 @@ public class MainFrame extends javax.swing.JFrame {
     public javax.swing.JTextField campoLNH3;
     public javax.swing.JTextField campoLNH4;
     public javax.swing.JTextField campoLNH5;
+    public javax.swing.JTextField campoLugar;
     public javax.swing.JTextField campoME;
     public javax.swing.JTextField campoMM;
     public javax.swing.JTextField campoMP;
@@ -1369,6 +1427,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel containerDataMadre;
     private javax.swing.JPanel containerDataPadre;
     public javax.swing.JTextField domP;
+    public com.toedter.calendar.JDateChooser fechaMatri;
+    public javax.swing.JTextField inscripcion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1394,6 +1454,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1401,7 +1462,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel labelCheck1;
     private javax.swing.JLabel labelCheck10;
     private javax.swing.JLabel labelCheck11;
     private javax.swing.JLabel labelCheck12;
@@ -1421,6 +1481,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelCheck26;
     private javax.swing.JLabel labelCheck27;
     private javax.swing.JLabel labelCheck3;
+    private javax.swing.JLabel labelCheck30;
     private javax.swing.JLabel labelCheck4;
     private javax.swing.JLabel labelCheck5;
     private javax.swing.JLabel labelCheck6;
@@ -1438,6 +1499,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblDNI;
     private javax.swing.JLabel lblEC;
     private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblLugar;
+    private javax.swing.JLabel lblLugar1;
     private javax.swing.JLabel lblME;
     private javax.swing.JLabel lblNacio;
     private javax.swing.JLabel lblNombre;
@@ -1456,6 +1519,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel pnlContacto;
     private javax.swing.JPanel pnlHijos;
     private javax.swing.JPanel pnlNacimiento;
+    private javax.swing.JPanel pnlNacimiento1;
     private javax.swing.JPanel pnlProgenitores;
     private javax.swing.JPanel pnlSuperior;
     private javax.swing.JLabel txtPnlSuperior;
