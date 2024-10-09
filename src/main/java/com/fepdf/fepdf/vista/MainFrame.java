@@ -271,7 +271,7 @@ public class MainFrame extends javax.swing.JFrame {
         campoFNH5 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FEPDF - Version 1.1");
+        setTitle("FEPDF - Version 1.2");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imgs/logo-fe2.jpg")));
         setResizable(false);
 
@@ -819,12 +819,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel25.setText("E.C al nacer el hijo");
 
-        comboEcNacM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltero", "Casado", "Divorciado", "Viudo" }));
+        comboEcNacM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltera", "Casada", "Divorciada", "Viuda" }));
         comboEcNacM.setPreferredSize(new java.awt.Dimension(96, 23));
 
         jLabel26.setText("E.C actual");
 
-        comboEcAcM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltero", "Casado", "Divorciado", "Viudo" }));
+        comboEcAcM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltera", "Casada", "Divorciada", "Viuda" }));
         comboEcAcM.setPreferredSize(new java.awt.Dimension(96, 23));
 
         jLabel28.setText("Nacionalidad al nacer el hijo");

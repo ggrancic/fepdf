@@ -242,7 +242,7 @@ public class ControllerMainFrame implements ActionListener {
            if (this.vista.combo1.getSelectedItem().toString().equals("SI")) {
                tboxOtros.setValue("ACTA DE MATRIMONIO DE LOS PROGENITORES");
            } else {
-               tboxOtros.setValue("AVERIGUAR");
+               tboxOtros.setValue("ACTA DE NACIMIENTO DEL PROGENITOR NO ESPAÑOL");
            }
            
            
@@ -387,7 +387,7 @@ public class ControllerMainFrame implements ActionListener {
            PDField mnm = docAcroForm.getField("MesNacProgB");
            PDField anm = docAcroForm.getField("AnioNacProgB");
            PDField ecnm = docAcroForm.getField("EstadoCivilAlNacProg1");
-           PDField ecam = docAcroForm.getField("EstadoCivilActual");
+           PDField ecam = docAcroForm.getField("EstadoCivilActualProgB");
            PDField nnm = docAcroForm.getField("NacionalidadAlNacProgB");
            PDField nam = docAcroForm.getField("NacionalidadActualProgB");
            PDField domm = docAcroForm.getField("DomicilioProgB");
@@ -418,6 +418,7 @@ public class ControllerMainFrame implements ActionListener {
            lugarNac.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvincia() );
            
            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+           SimpleDateFormat dfes = new SimpleDateFormat("yyyy-MM-dd");
            
            fechaInsc.setValue(df.format(this.vista.campoFI.getDate()));
            registroCivil.setValue(this.vista.campoRC.getText().toUpperCase());
@@ -425,39 +426,39 @@ public class ControllerMainFrame implements ActionListener {
            pagina.setValue(this.vista.campoPagina.getText());
            numero.setValue(this.vista.campoNroPag.getText());
            
-           nombrePadre.setValue(this.vista.campoNomP.getText());
-           apellido1Padre.setValue(this.vista.campoApePadre1.getText());
-           apellido2Padre.setValue(this.vista.campoApePadre2.getText());
-           pp.setValue(this.vista.campoPP.getText());
-           mp.setValue(this.vista.campoMP.getText());
-           lnp.setValue(this.vista.campoNacP.getText());
-           nnp.setValue(this.vista.nacioNacP.getText());
-           nap.setValue(this.vista.nacioAcP.getText());
-           domp.setValue(this.vista.domP.getText());
+           nombrePadre.setValue(this.vista.campoNomP.getText().toUpperCase());
+           apellido1Padre.setValue(this.vista.campoApePadre1.getText().toUpperCase());
+           apellido2Padre.setValue(this.vista.campoApePadre2.getText().toUpperCase());
+           pp.setValue(this.vista.campoPP.getText().toUpperCase());
+           mp.setValue(this.vista.campoMP.getText().toUpperCase());
+           lnp.setValue(this.vista.campoNacP.getText().toUpperCase());
+           nnp.setValue(this.vista.nacioNacP.getText().toUpperCase());
+           nap.setValue(this.vista.nacioAcP.getText().toUpperCase());
+           domp.setValue(this.vista.domP.getText().toUpperCase());
            
-           LocalDate fechaPadre = LocalDate.parse(df.format(this.vista.campoFNP.getDate()));
+           LocalDate fechaPadre = LocalDate.parse(dfes.format(this.vista.campoFNP.getDate()));
            dnp.setValue(String.valueOf(fechaPadre.getDayOfMonth()));
            mnp.setValue(fechaPadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
            anp.setValue(String.valueOf(fechaPadre.getYear()));
-           ecnp.setValue(this.vista.comboEcNacP.getSelectedItem().toString());
-           ecap.setValue(this.vista.comboEcAcP.getSelectedItem().toString());
+           ecnp.setValue(this.vista.comboEcNacP.getSelectedItem().toString().toUpperCase());
+           ecap.setValue(this.vista.comboEcAcP.getSelectedItem().toString().toUpperCase());
            
-           nombreMadre.setValue(this.vista.campoNomM.getText());
-           apellido1Madre.setValue(this.vista.campoApeMadre.getText());
-           apellido2Madre.setValue(this.vista.campoApeMadre2.getText());
-           pm.setValue(this.vista.campoPM.getText());
-           mm.setValue(this.vista.campoMM.getText());
-           lnm.setValue(this.vista.campoNacM.getText());
-           nnm.setValue(this.vista.nacioNacM.getText());
-           nam.setValue(this.vista.nacioAcM.getText());
-           domm.setValue(this.vista.domP.getText());
+           nombreMadre.setValue(this.vista.campoNomM.getText().toUpperCase());
+           apellido1Madre.setValue(this.vista.campoApeMadre.getText().toUpperCase());
+           apellido2Madre.setValue(this.vista.campoApeMadre2.getText().toUpperCase());
+           pm.setValue(this.vista.campoPM.getText().toUpperCase());
+           mm.setValue(this.vista.campoMM.getText().toUpperCase());
+           lnm.setValue(this.vista.campoNacM.getText().toUpperCase());
+           nnm.setValue(this.vista.nacioNacM.getText().toUpperCase());
+           nam.setValue(this.vista.nacioAcM.getText().toUpperCase());
+           domm.setValue(this.vista.domP.getText().toUpperCase());
            
-           LocalDate fechaMadre = LocalDate.parse(df.format(this.vista.campoFNM.getDate()));
-           dnm.setValue(String.valueOf(fechaPadre.getDayOfMonth()));
-           mnm.setValue(fechaPadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
-           anm.setValue(String.valueOf(fechaPadre.getYear()));
-           ecnm.setValue(this.vista.comboEcNacP.getSelectedItem().toString());
-           ecam.setValue(this.vista.comboEcAcP.getSelectedItem().toString());
+           LocalDate fechaMadre = LocalDate.parse(dfes.format(this.vista.campoFNM.getDate()));
+           dnm.setValue(String.valueOf(fechaMadre.getDayOfMonth()));
+           mnm.setValue(fechaMadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
+           anm.setValue(String.valueOf(fechaMadre.getYear()));
+           ecnm.setValue(this.vista.comboEcNacP.getSelectedItem().toString().toUpperCase());
+           ecam.setValue(this.vista.comboEcAcP.getSelectedItem().toString().toUpperCase());
            
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
