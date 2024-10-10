@@ -386,7 +386,7 @@ public class ControllerMainFrame implements ActionListener {
            PDField dnm = docAcroForm.getField("DiaNacProgB");
            PDField mnm = docAcroForm.getField("MesNacProgB");
            PDField anm = docAcroForm.getField("AnioNacProgB");
-           PDField ecnm = docAcroForm.getField("EstadoCivilAlNacProg1");
+           PDField ecnm = docAcroForm.getField("EstadoCivilAlNacProgB");
            PDField ecam = docAcroForm.getField("EstadoCivilActualProgB");
            PDField nnm = docAcroForm.getField("NacionalidadAlNacProgB");
            PDField nam = docAcroForm.getField("NacionalidadActualProgB");
@@ -465,8 +465,8 @@ public class ControllerMainFrame implements ActionListener {
            dnm.setValue(String.valueOf(fechaMadre.getDayOfMonth()));
            mnm.setValue(fechaMadre.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
            anm.setValue(String.valueOf(fechaMadre.getYear()));
-           ecnm.setValue(this.vista.comboEcNacP.getSelectedItem().toString().toUpperCase());
-           ecam.setValue(this.vista.comboEcAcP.getSelectedItem().toString().toUpperCase());
+           ecnm.setValue(this.vista.comboEcNacM.getSelectedItem().toString().toUpperCase());
+           ecam.setValue(this.vista.comboEcAcM.getSelectedItem().toString().toUpperCase());
            
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
@@ -714,8 +714,8 @@ public class ControllerMainFrame implements ActionListener {
                ((PDCheckBox) checkNoConsta).check();
            }
            
-           padre.setValue(this.vista.campoNomP.getText());
-           padre.setValue(this.vista.campoNomM.getText());
+           padre.setValue(this.vista.campoNomP.getText().toUpperCase());
+           madre.setValue(this.vista.campoNomM.getText().toUpperCase());
            
            tboxPE.setValue(persona.getMunEsp() + "  -  " + persona.getProvEsp());
            tboxConsOrig.setValue("ROSARIO  -  ARGENTINA");
@@ -847,7 +847,7 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.getCampoCiudad().setText("");
         this.vista.getCampoProvincia().setText("");
         this.vista.getCampoPais().setText("");
-        this.vista.getCampoTelefono().setText("");
+        this.vista.getCampoTelefono().setText("+54 9");
         this.vista.getCampoEmail().setText("");
         this.vista.getCampoFN().setCalendar(null);
         this.vista.campoFT.setCalendar(null);
@@ -884,6 +884,8 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.campoFNH3.setDate(null);
         this.vista.campoFNH4.setDate(null);
         this.vista.campoFNH5.setDate(null);
+        this.vista.campoTC1.setText("+54 9");
+        this.vista.campoTC2.setText("+54 9");
         
     }
     
