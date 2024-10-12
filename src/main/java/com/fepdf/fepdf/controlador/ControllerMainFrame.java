@@ -495,6 +495,8 @@ public class ControllerMainFrame implements ActionListener {
                lugarCeleb.setValue(this.vista.campoLugar.getText().toUpperCase());
                inscrito.setValue(this.vista.inscripcion.getText().toUpperCase());
                docuMatri.setValue("ACTA DE MATRIMONIO");
+           } else {
+               existeMatri.setValue("NO EXISTE");
            }
            
            docHoja.save(this.crearCarpeta(persona) + "/InscripNacimiento.pdf");
@@ -692,13 +694,13 @@ public class ControllerMainFrame implements ActionListener {
                ((PDCheckBox) checkF).check();
            }
            
-           if (persona.getEstadoCivil().equals("SOLTERO")) {
+           if (persona.getEstadoCivil().equals("SOLTERO") || persona.getEstadoCivil().equals("SOLTERA")) {
                ((PDCheckBox) checkSoltero).check();
-           } else if (persona.getEstadoCivil().equals("CASADO")) {
+           } else if (persona.getEstadoCivil().equals("CASADO") || persona.getEstadoCivil().equals("CASADA")) {
                ((PDCheckBox) checkCasado).check();
-           } else if (persona.getEstadoCivil().equals("SEPARADO")) {
+           } else if (persona.getEstadoCivil().equals("SEPARADO") || persona.getEstadoCivil().equals("SEPARADA")) {
                ((PDCheckBox) checkSeparado).check();
-           } else if (persona.getEstadoCivil().equals("DIVORCIADO")) {
+           } else if (persona.getEstadoCivil().equals("DIVORCIADO") || persona.getEstadoCivil().equals("DIVORCIADA")) {
                ((PDCheckBox) checkDivor).check();
            } else {
                ((PDCheckBox) checkViudo).check();

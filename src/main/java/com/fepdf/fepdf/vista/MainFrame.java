@@ -2,10 +2,6 @@ package com.fepdf.fepdf.vista;
 
 import com.toedter.calendar.JDateChooser;
 import java.awt.Toolkit;
-import java.io.File;
-import java.util.Locale;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
