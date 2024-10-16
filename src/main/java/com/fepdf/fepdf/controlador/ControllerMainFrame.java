@@ -708,7 +708,7 @@ public class ControllerMainFrame implements ActionListener {
            
            if (this.vista.comboEstudios.getSelectedItem().toString().equals("Primaria / Secundaria")) {
                ((PDCheckBox) checkEso).check();
-           } else if (this.vista.comboEstudios.getSelectedItem().toString().equals("Bachiller")) {
+           } else if (this.vista.comboEstudios.getSelectedItem().toString().equals("Terciario")) {
                ((PDCheckBox) checkBachi).check();
            } else if(this.vista.comboEstudios.getSelectedItem().toString().equals("Universitario")) {
                ((PDCheckBox) checkUniv).check();
