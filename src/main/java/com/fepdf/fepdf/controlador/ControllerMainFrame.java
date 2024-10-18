@@ -864,12 +864,6 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.campoTomo.setText("");
         this.vista.campoPagina.setText("");
         this.vista.campoNroPag.setText("");
-        this.vista.campoNC.setText("");
-        this.vista.campoDC1.setText("");
-        this.vista.campoTC1.setText("");
-        this.vista.campoNC2.setText("");
-        this.vista.campoDC2.setText("");
-        this.vista.campoTC2.setText("");
         this.vista.campoCony.setText("");
         this.vista.campoNH1.setText("");
         this.vista.campoNH2.setText("");
