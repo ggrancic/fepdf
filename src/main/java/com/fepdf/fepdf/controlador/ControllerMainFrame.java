@@ -858,7 +858,7 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.getCampoPrN().setText("");
         this.vista.getCampoPN().setText("");
         this.vista.campoCP.setText("");
-        this.vista.campoHN.setText("");
+        this.vista.campoHN.setText("00:00");
         this.vista.campoRC.setText("");
         this.vista.campoFI.setCalendar(null);
         this.vista.campoTomo.setText("");
