@@ -8,6 +8,8 @@ public class Persona {
     private String nacionalidad;
     private String DNI;
     private String calle;
+    private String altura;
+    private String piso;
     private String ciudad;
     private String provincia;
     private String pais;
@@ -78,6 +80,23 @@ public class Persona {
     public void setCalle(String calle) {
         this.calle = calle;
     }
+
+    public String getAltura() {
+        return altura;
+    }
+
+    public void setAltura(String altura) {
+        this.altura = altura;
+    }
+
+    public String getPiso() {
+        return piso;
+    }
+
+    public void setPiso(String piso) {
+        this.piso = piso;
+    }
+    
 
     public String getCiudad() {
         return ciudad;

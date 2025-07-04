@@ -20,6 +20,10 @@ import javax.swing.filechooser.FileSystemView;
 import org.apache.commons.io.IOUtils;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
@@ -64,6 +68,9 @@ public class ControllerMainFrame implements ActionListener {
         persona.setNacionalidad(this.vista.getCampoNacio().getText().toUpperCase());
         persona.setDNI(this.vista.getCampoDNI().getText().toUpperCase());
         persona.setCalle(this.vista.getCampoCalle().getText().toUpperCase());
+        persona.setAltura(this.vista.getCampoAltura().getText().toUpperCase());
+        persona.setPiso(this.vista.getCampoPiso().getText().toUpperCase());
+        
         persona.setCiudad(this.vista.getCampoCiudad().getText().toUpperCase());
         persona.setProvincia(this.vista.getCampoProvincia().getText().toUpperCase());
         persona.setPais(this.vista.getCampoPais().getText().toUpperCase());
@@ -140,7 +147,18 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           
+           if (!(persona.getAltura().isBlank())) {
+               if (!(persona.getPiso().isBlank())) {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+               } else {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+               }
+           } else {
+               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           }
+           
+           
            tboxProv.setValue(persona.getProvincia());
            tboxPais.setValue(persona.getPais());
            tboxTelefono.setValue(persona.getTelefono());
@@ -209,7 +227,17 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           
+           if (!(persona.getAltura().isBlank())) {
+               if (!(persona.getPiso().isBlank())) {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+               } else {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+               }
+           } else {
+               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           }
+           
            tboxProv.setValue(persona.getProvincia());
            tboxProgInscrito.setValue("ROSARIO");
            
@@ -294,7 +322,17 @@ public class ControllerMainFrame implements ActionListener {
            tboxNac.setValue(persona.getNacionalidad());
            tboxEC.setValue(persona.getEstadoCivil());
            tboxDNI.setValue("DNI: " + persona.getDNI());
-           tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           
+           if (!(persona.getAltura().isBlank())) {
+               if (!(persona.getPiso().isBlank())) {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+               } else {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+               }
+           } else {
+               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
+           }
+           
            tboxProv.setValue(persona.getProvincia());
            tboxPais.setValue(persona.getPais());
            tboxTelefono.setValue(persona.getTelefono());
@@ -471,7 +509,17 @@ public class ControllerMainFrame implements ActionListener {
            tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
            tboxNac.setValue(persona.getPais());
            tboxFN.setValue(persona.getFechaNacimiento());
-           tboxDom.setValue(persona.getCalle());
+           
+           if (!(persona.getAltura().isBlank())) {
+               if (!(persona.getPiso().isBlank())) {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+               } else {
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+               }
+           } else {
+               tboxDom.setValue(persona.getCalle());
+           }
+           
            tboxCP.setValue(this.vista.campoCP.getText());
            tboxTel.setValue(persona.getTelefono());
            tboxMail.setValue(persona.getEmail().toLowerCase());
@@ -516,6 +564,8 @@ public class ControllerMainFrame implements ActionListener {
         try {
            byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/declaracionExplicativa.pdf")));       
            PDDocument docDecl = Loader.loadPDF(byteArray);
+           PDPage page = docDecl.getPage(0);
+           PDPageContentStream cstream = new PDPageContentStream(docDecl, page, PDPageContentStream.AppendMode.PREPEND, true, true);
            PDAcroForm docAcroForm = docDecl.getDocumentCatalog().getAcroForm();
            
            PDField tboxA1 = docAcroForm.getField("topmostSubform[0].Page1[0].apellido1[0]");
@@ -545,12 +595,18 @@ public class ControllerMainFrame implements ActionListener {
            
            tboxCiudad.setValue(persona.getCiudadNacimiento());
            tboxProv.setValue(persona.getProvinciaNacimiento() + " (" + persona.getPaisNacimiento() + ")");
-           tboxConsulado.setValue(persona.getConsulado());
+           tboxConsulado.setValue("C.G. " + persona.getConsulado());
            
            PDRadioButton radio = ((PDRadioButton) checkArraigo);
            radio.setValue("1");
            
            
+           cstream.beginText();
+           cstream.newLineAtOffset(210, 167);
+           cstream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
+           cstream.showText(persona.getConsulado().substring(0,1).toUpperCase() + persona.getConsulado().substring(1).toLowerCase());
+           cstream.endText();
+           cstream.close();
            
            docDecl.save(this.crearCarpeta(persona) + "/declaracionExplicativa.pdf");
            docDecl.close();
@@ -567,40 +623,65 @@ public class ControllerMainFrame implements ActionListener {
         boolean ok = false;
         
         try {
-           byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/solicitudInscripcionResidenteEditable.pdf")));       
+           byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/solicitudInscripcionResidenteEditable2.pdf")));       
            PDDocument docSoli = Loader.loadPDF(byteArray);
            PDAcroForm docAcroForm = docSoli.getDocumentCatalog().getAcroForm();
-           PDField lbox = docAcroForm.getField("lbox1");
+           
+           PDField tboxConsulado = docAcroForm.getField("tboxConsulado");
            PDField tboxNom = docAcroForm.getField("tBoxNom");
            PDField tboxA1 = docAcroForm.getField("tBoxApe");
            PDField tboxA2 = docAcroForm.getField("tBoxApe2");
            PDField tboxNac = docAcroForm.getField("tBoxNac");
+           PDField tboxDNI = docAcroForm.getField("tBoxDNI");
+           
+           PDField tboxPaisNac = docAcroForm.getField("tBoxPaisNac");
+           PDField tboxProvNac = docAcroForm.getField("tboxProvNac");
+           PDField tboxMuniNac = docAcroForm.getField("tboxMuniNac");
+           
+           PDField tBoxDomicilio = docAcroForm.getField("tBoxDomiciliio");
+           PDField tBoxNroDom = docAcroForm.getField("tBoxNroDom");
+           PDField tBoxPlanta = docAcroForm.getField("tBoxPlanta");
+           
+           PDField tboxCP = docAcroForm.getField("tBoxCP");
+           PDField tboxLocalidad = docAcroForm.getField("tBoxLocalidad");
+           PDField tboxPais = docAcroForm.getField("tBoxPais");
+           
+           
+           PDField checkH = docAcroForm.getField("checkHombre");
+           PDField checkM = docAcroForm.getField("checkMujer");
+           
+           PDField checkInferior = docAcroForm.getField("checkNoPrimaria");
+           PDField checkEscolar = docAcroForm.getField("checkPrimaria");
+           PDField checkESOSuperior = docAcroForm.getField("checkESOSuperior");
+           PDField checkNoConsta = docAcroForm.getField("checkNoConsta");
+           
            PDField tboxFijo = docAcroForm.getField("tBoxTel");
            PDField tboxTel = docAcroForm.getField("tBoxMovil");
            PDField tboxMail = docAcroForm.getField("tBoxMail");
            PDField tboxC1 = docAcroForm.getField("Text Box 1_41");
            PDField tboxC2 = docAcroForm.getField("Text Box 1_42");
-           PDField tboxDN = docAcroForm.getField("tBoxDomicilio");
-           PDField tboxPE = docAcroForm.getField("tBoxMuniEs");
-           PDField tboxConsOrig = docAcroForm.getField("tBoxPadronEs");
-           PDField checkM = docAcroForm.getField("Check Box 1_2");
-           PDField checkF = docAcroForm.getField("Check Box 1");
-           PDField checkSoltero = docAcroForm.getField("Check Box 1_3");
-           PDField checkCasado = docAcroForm.getField("Check Box 1_4");
-           PDField checkSeparado = docAcroForm.getField("Check Box 1_5");
-           PDField checkDivor = docAcroForm.getField("Check Box 1_6");
-           PDField checkViudo = docAcroForm.getField("Check Box 1_7");
-           PDField checkEso = docAcroForm.getField("Check Box 1_9");
-           PDField checkBachi = docAcroForm.getField("Check Box 1_10");
-           PDField checkUniv = docAcroForm.getField("Check Box 1_11");
-           PDField checkNoConsta = docAcroForm.getField("Check Box 1_8");
-           PDField domLargo = docAcroForm.getField("tBoxDom2");
-           PDField cont1 = docAcroForm.getField("tPriContacto");
-           PDField cont2 = docAcroForm.getField("tboxOtroContacto");
-           PDField cony = docAcroForm.getField("tBoxConyuge");
            
-           PDField padre = docAcroForm.getField("tBoxNac_2");
-           PDField madre = docAcroForm.getField("tBoxNac_3");
+           PDField tboxEmpadrona = docAcroForm.getField("Empadrona");
+           PDField tboxMuniEsp = docAcroForm.getField("MunInscrip");
+           PDField tboxProvEsp = docAcroForm.getField("ProvInscrip");
+           PDField checkSoltero = docAcroForm.getField("checkSoltero");
+           PDField checkCasado = docAcroForm.getField("checkCasado");
+           PDField checkSeparado = docAcroForm.getField("checkSeparado");
+           PDField checkDivor = docAcroForm.getField("checkDivor");
+           PDField checkViudo = docAcroForm.getField("checkViudo");
+           
+           PDField tBoxNC1 = docAcroForm.getField("tBoxNC1");
+           PDField tBoxTC1 = docAcroForm.getField("tBoxTC1");
+           PDField tBoxEC1 = docAcroForm.getField("tBoxEC1");
+           PDField tBoxDC1 = docAcroForm.getField("tBoxDC1");
+           
+           PDField tBoxNC2 = docAcroForm.getField("tBoxNC2");
+           PDField tBoxTC2 = docAcroForm.getField("tBoxTC2");
+           PDField tBoxEC2 = docAcroForm.getField("tBoxEC2");
+           PDField tBoxDC2 = docAcroForm.getField("tBoxDC2");
+           
+           PDField tBoxConyuge = docAcroForm.getField("tBoxConyuge");
+           PDField tBoxProgenitores = docAcroForm.getField("tBoxProgenitores");
            
 
            //hijo 1
@@ -618,8 +699,8 @@ public class ControllerMainFrame implements ActionListener {
            PDField da4h1 = docAcroForm.getField("da4");
            
            //hijo2
-           PDField nh2 = docAcroForm.getField("tBoxH1_2");
-           PDField lnh2 = docAcroForm.getField("tBoxHNac1_2");
+           PDField nh2 = docAcroForm.getField("tBoxH2");
+           PDField lnh2 = docAcroForm.getField("tBoxHNac2");
            
            // digitos de nacimiento hijo 2
            PDField dd1h2 = docAcroForm.getField("dd1h2");
@@ -632,8 +713,8 @@ public class ControllerMainFrame implements ActionListener {
            PDField da4h2 = docAcroForm.getField("da4h2");
            
            //hijo3
-           PDField nh3 = docAcroForm.getField("tBoxH1_3");
-           PDField lnh3 = docAcroForm.getField("tBoxHNac1_3");
+           PDField nh3 = docAcroForm.getField("tBoxH3");
+           PDField lnh3 = docAcroForm.getField("tBoxHNac3");
            
            // digitos de nacimiento hijo 3
            PDField dd1h3 = docAcroForm.getField("dd1h3");
@@ -646,8 +727,8 @@ public class ControllerMainFrame implements ActionListener {
            PDField da4h3 = docAcroForm.getField("da4h3");
            
            //hijo4
-           PDField nh4 = docAcroForm.getField("tBoxH1_4");
-           PDField lnh4 = docAcroForm.getField("tBoxHNac1_4");
+           PDField nh4 = docAcroForm.getField("tBoxH4");
+           PDField lnh4 = docAcroForm.getField("tBoxHNac4");
            
            // digitos de nacimiento hijo 4
            PDField dd1h4 = docAcroForm.getField("dd1h4");
@@ -660,8 +741,8 @@ public class ControllerMainFrame implements ActionListener {
            PDField da4h4 = docAcroForm.getField("da4h4");
            
            //hijo5
-           PDField nh5 = docAcroForm.getField("tBoxH1_5");
-           PDField lnh5 = docAcroForm.getField("tBoxHNac1_5");
+           PDField nh5 = docAcroForm.getField("tBoxH5");
+           PDField lnh5 = docAcroForm.getField("tBoxHNac5");
            
            // digitos de nacimiento hijo 5
            PDField dd1h5 = docAcroForm.getField("dd1h5");
@@ -674,24 +755,38 @@ public class ControllerMainFrame implements ActionListener {
            PDField da4h5 = docAcroForm.getField("da4h5");
            
            
-           ((PDComboBox) lbox).setValue("NO");
+           tboxConsulado.setValue(persona.getConsulado());
            tboxNom.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
            tboxA2.setValue(persona.getApellidoMaterno());
            tboxNac.setValue(persona.getFechaNacimiento());
+           tboxDNI.setValue(persona.getDNI());
+           tboxPaisNac.setValue(persona.getPaisNacimiento());
+           tboxProvNac.setValue(persona.getProvinciaNacimiento());
+           tboxMuniNac.setValue(persona.getCiudadNacimiento());
+           tBoxDomicilio.setValue(persona.getCalle());
+           tBoxNroDom.setValue(persona.getAltura());
+           tBoxPlanta.setValue(persona.getPiso());
+           tboxCP.setValue(this.vista.campoCP.getText().trim());
+           tboxLocalidad.setValue(persona.getCiudad() + " , "  + persona.getProvincia());
+           tboxPais.setValue(persona.getPais());
+           tboxEmpadrona.setValue("C.G. " + persona.getConsulado() + " - ARGENTINA");
+           tboxMuniEsp.setValue(persona.getMunEsp());
+           tboxProvEsp.setValue(persona.getProvEsp());
+           
            tboxFijo.setValue("---------------");
            tboxTel.setValue(persona.getTelefono());
            tboxMail.setValue(persona.getEmail());
            tboxC1.setValue(persona.getConsulado());
            tboxC2.setValue(persona.getConsulado());
-           tboxDN.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvinciaNacimiento() + ", " + persona.getPaisNacimiento());
-           domLargo.setValue(persona.getCalle()+ ", " + this.vista.campoCP.getText() + ", " + persona.getCiudad() + ", " +  persona.getProvincia() + ", " + persona.getPais());
+           
+           //domLargo.setValue(persona.getCalle()+ ", " + this.vista.campoCP.getText() + ", " + persona.getCiudad() + ", " +  persona.getProvincia() + ", " + persona.getPais());
            
            
            if (persona.getSexo().equals("MASCULINO")) {
-               ((PDCheckBox) checkM).check();
+               ((PDCheckBox) checkH).check();
            } else {
-               ((PDCheckBox) checkF).check();
+               ((PDCheckBox) checkM).check();
            }
            
            if (persona.getEstadoCivil().equals("SOLTERO") || persona.getEstadoCivil().equals("SOLTERA")) {
@@ -706,25 +801,30 @@ public class ControllerMainFrame implements ActionListener {
                ((PDCheckBox) checkViudo).check();
            }
            
-           if (this.vista.comboEstudios.getSelectedItem().toString().equals("Primaria / Secundaria")) {
-               ((PDCheckBox) checkEso).check();
-           } else if (this.vista.comboEstudios.getSelectedItem().toString().equals("Terciario")) {
-               ((PDCheckBox) checkBachi).check();
-           } else if(this.vista.comboEstudios.getSelectedItem().toString().equals("Universitario")) {
-               ((PDCheckBox) checkUniv).check();
+           if (this.vista.comboEstudios.getSelectedItem().toString().equals("Primario no terminado")) {
+               ((PDCheckBox) checkInferior).check();
+           } else if (this.vista.comboEstudios.getSelectedItem().toString().equals("Primario terminado")) {
+               ((PDCheckBox) checkEscolar).check();
+           } else if(this.vista.comboEstudios.getSelectedItem().toString().equals("Secundario - Terciario - Universitario")) {
+               ((PDCheckBox) checkESOSuperior).check();
            } else {
                ((PDCheckBox) checkNoConsta).check();
            }
            
-           padre.setValue(this.vista.campoNomP.getText().toUpperCase());
-           madre.setValue(this.vista.campoNomM.getText().toUpperCase());
            
-           tboxPE.setValue(persona.getMunEsp() + "  -  " + persona.getProvEsp());
-           tboxConsOrig.setValue("ROSARIO  -  ARGENTINA");
+           tBoxNC1.setValue(this.vista.campoNC.getText().toUpperCase());
+           tBoxDC1.setValue(this.vista.campoDC1.getText().toUpperCase());
+           tBoxTC1.setValue(this.vista.campoTC1.getText());
+           tBoxEC1.setValue(this.vista.campoCorreoC1.getText());
            
-           cont1.setValue(this.vista.campoNC.getText().toUpperCase() + ", " + this.vista.campoDC1.getText().toUpperCase() + ", "+ this.vista.campoTC1.getText());
-           cont2.setValue(this.vista.campoNC2.getText().toUpperCase() + ", " + this.vista.campoDC2.getText().toUpperCase() + ", "+ this.vista.campoTC2.getText());
-           cony.setValue(this.vista.campoCony.getText().toUpperCase());
+           tBoxNC2.setValue(this.vista.campoNC2.getText().toUpperCase());
+           tBoxDC2.setValue(this.vista.campoDC2.getText().toUpperCase());
+           tBoxTC2.setValue(this.vista.campoTC2.getText());
+           tBoxEC2.setValue(this.vista.campoCorreoC2.getText());
+           
+           tBoxConyuge.setValue(this.vista.campoCony.getText().toUpperCase());
+           
+           tBoxProgenitores.setValue(this.vista.getCampoProgenitores().getText().toUpperCase());
            
            nh1.setValue(this.vista.campoNH1.getText().toUpperCase());
            lnh1.setValue(this.vista.campoLNH1.getText().toUpperCase());
@@ -846,6 +946,8 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.comboSx.setSelectedIndex(0);
         this.vista.getCampoNacio().setText("");
         this.vista.getCampoCalle().setText("");
+        this.vista.getCampoAltura().setText("");
+        this.vista.getCampoPiso().setText("");
         this.vista.getCampoCiudad().setText("");
         this.vista.getCampoProvincia().setText("");
         this.vista.getCampoPais().setText("");
@@ -865,6 +967,7 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.campoPagina.setText("");
         this.vista.campoNroPag.setText("");
         this.vista.campoCony.setText("");
+        this.vista.campoProgenitores.setText("");
         this.vista.campoNH1.setText("");
         this.vista.campoNH2.setText("");
         this.vista.campoNH3.setText("");
@@ -882,6 +985,8 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.campoFNH5.setDate(null);
         this.vista.campoTC1.setText("+54 9");
         this.vista.campoTC2.setText("+54 9");
+        this.vista.campoCorreoC1.setText("");
+        this.vista.campoCorreoC2.setText("");
         
     }
     
