@@ -692,7 +692,7 @@ public class ControllerMainFrame implements ActionListener {
            PDField dd1h1 = docAcroForm.getField("dd1");
            PDField dd2h1 = docAcroForm.getField("dd2");
            PDField dm1h1 = docAcroForm.getField("dm1");
-           PDField dm2h1 = docAcroForm.getField("dm3");
+           PDField dm2h1 = docAcroForm.getField("dm2");
            PDField da1h1 = docAcroForm.getField("da1");
            PDField da2h1 = docAcroForm.getField("da2");
            PDField da3h1 = docAcroForm.getField("da3");
