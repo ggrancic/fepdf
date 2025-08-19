@@ -143,14 +143,7 @@
                                           <Component id="campoCN" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="campoPE" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblPN" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="campoPN" min="-2" pref="200" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="campoPE" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="91" max="32767" attributes="0"/>
                           </Group>
@@ -167,6 +160,11 @@
                                   </Group>
                                   <Component id="labelFn" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblPN" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Component id="campoPN" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -246,7 +244,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                      <EmptySpace pref="63" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -563,7 +561,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblCN">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ciudad de Origen"/>
+                <Property name="text" type="java.lang.String" value="Ciudad de Nacimiento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoConsulado">

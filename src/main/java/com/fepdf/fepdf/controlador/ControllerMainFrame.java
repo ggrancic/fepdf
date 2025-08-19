@@ -824,7 +824,7 @@ public class ControllerMainFrame implements ActionListener {
            
            tBoxConyuge.setValue(this.vista.campoCony.getText().toUpperCase());
            
-           tBoxProgenitores.setValue(this.vista.getCampoProgenitores().getText().toUpperCase());
+           tBoxProgenitores.setValue(this.vista.campoNomP.getText() + ", " + this.vista.campoNomM.getText());
            
            nh1.setValue(this.vista.campoNH1.getText().toUpperCase());
            lnh1.setValue(this.vista.campoLNH1.getText().toUpperCase());

@@ -296,7 +296,6 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("FEPDF - Version 1.4");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imgs/logo-fe2.jpg")));
         setResizable(false);
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         pnlSuperior.setBackground(new java.awt.Color(66, 118, 202));
         pnlSuperior.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -372,7 +371,7 @@ public class MainFrame extends javax.swing.JFrame {
         campoTelefono.setText("+54 9");
         campoTelefono.setPreferredSize(new java.awt.Dimension(200, 23));
 
-        lblCN.setText("Ciudad de Origen");
+        lblCN.setText("Ciudad de Nacimiento");
 
         campoConsulado.setPreferredSize(new java.awt.Dimension(200, 23));
 
@@ -454,12 +453,7 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(campoFN, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(campoFT, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(campoCN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(campoPE, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlCentralLayout.createSequentialGroup()
-                                    .addComponent(lblPN)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(campoPN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(campoPE, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 91, Short.MAX_VALUE))
                     .addGroup(pnlCentralLayout.createSequentialGroup()
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -471,7 +465,11 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(lblEC)
                                     .addComponent(lblCalle)))
                             .addComponent(labelFn)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addComponent(lblPN)
+                                .addGap(48, 48, 48)
+                                .addComponent(campoPN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -527,7 +525,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(lblME))
                             .addGap(18, 18, 18)
                             .addComponent(campoPrN, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnFin)
