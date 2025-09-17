@@ -150,9 +150,9 @@ public class ControllerMainFrame implements ActionListener {
            
            if (!(persona.getAltura().isBlank())) {
                if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
                } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
                }
            } else {
                tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
@@ -230,9 +230,9 @@ public class ControllerMainFrame implements ActionListener {
            
            if (!(persona.getAltura().isBlank())) {
                if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
                } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
                }
            } else {
                tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
@@ -325,9 +325,9 @@ public class ControllerMainFrame implements ActionListener {
            
            if (!(persona.getAltura().isBlank())) {
                if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
                } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
+                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
                }
            } else {
                tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
@@ -632,7 +632,6 @@ public class ControllerMainFrame implements ActionListener {
            PDField tboxA1 = docAcroForm.getField("tBoxApe");
            PDField tboxA2 = docAcroForm.getField("tBoxApe2");
            PDField tboxNac = docAcroForm.getField("tBoxNac");
-           PDField tboxDNI = docAcroForm.getField("tBoxDNI");
            
            PDField tboxPaisNac = docAcroForm.getField("tBoxPaisNac");
            PDField tboxProvNac = docAcroForm.getField("tboxProvNac");
@@ -760,7 +759,6 @@ public class ControllerMainFrame implements ActionListener {
            tboxA1.setValue(persona.getApellidoPaterno());
            tboxA2.setValue(persona.getApellidoMaterno());
            tboxNac.setValue(persona.getFechaNacimiento());
-           tboxDNI.setValue(persona.getDNI());
            tboxPaisNac.setValue(persona.getPaisNacimiento());
            tboxProvNac.setValue(persona.getProvinciaNacimiento());
            tboxMuniNac.setValue(persona.getCiudadNacimiento());
@@ -824,7 +822,7 @@ public class ControllerMainFrame implements ActionListener {
            
            tBoxConyuge.setValue(this.vista.campoCony.getText().toUpperCase());
            
-           tBoxProgenitores.setValue(this.vista.campoNomP.getText() + ", " + this.vista.campoNomM.getText());
+           tBoxProgenitores.setValue(this.vista.campoNomP.getText().toUpperCase() + ", " + this.vista.campoNomM.getText().toUpperCase());
            
            nh1.setValue(this.vista.campoNH1.getText().toUpperCase());
            lnh1.setValue(this.vista.campoLNH1.getText().toUpperCase());
