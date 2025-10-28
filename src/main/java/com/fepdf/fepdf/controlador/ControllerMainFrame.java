@@ -252,23 +252,16 @@ public class ControllerMainFrame implements ActionListener {
            ecnm.setValue(this.vista.comboEcNacM.getSelectedItem().toString().toUpperCase());
            ecam.setValue(this.vista.comboEcAcM.getSelectedItem().toString().toUpperCase());
            
-           tboxDeclarante.setValue(persona.getNombres() + " " + persona.getApellidoPaterno());
+           tboxDeclarante.setValue(this.vista.campoNombreTutor.getText().trim());
            tboxNac.setValue(persona.getPais());
            tboxFN.setValue(persona.getFechaNacimiento());
            
-           if (!(persona.getAltura().isBlank())) {
-               if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso());
-               } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura());
-               }
-           } else {
-               tboxDom.setValue(persona.getCalle());
-           }
+           tboxDom.setValue(this.vista.campoDomTut.getText().trim());
            
+           // 
            tboxCP.setValue(this.vista.campoCP.getText());
-           tboxTel.setValue(persona.getTelefono());
-           tboxMail.setValue(persona.getEmail().toLowerCase());
+           tboxTel.setValue(this.vista.campoTelTut.getText().trim());
+           tboxMail.setValue(this.vista.campoEmailTut.getText().trim());
            tboxDNI.setValue("DNI: " + persona.getDNI());
            tboxCons.setValue(persona.getConsulado());
            tboxLN.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvinciaNacimiento() + ", " + persona.getPaisNacimiento());
@@ -425,81 +418,6 @@ public class ControllerMainFrame implements ActionListener {
            PDField tBoxEC2 = docAcroForm.getField("tBoxEC2");
            PDField tBoxDC2 = docAcroForm.getField("tBoxDC2");
            
-           PDField tBoxConyuge = docAcroForm.getField("tBoxConyuge");
-           PDField tBoxProgenitores = docAcroForm.getField("tBoxProgenitores");
-           
-
-           //hijo 1
-           PDField nh1 = docAcroForm.getField("tBoxH1");
-           PDField lnh1 = docAcroForm.getField("tBoxHNac1");
-           
-           // digitos de nacimiento hijo 1
-           PDField dd1h1 = docAcroForm.getField("dd1");
-           PDField dd2h1 = docAcroForm.getField("dd2");
-           PDField dm1h1 = docAcroForm.getField("dm1");
-           PDField dm2h1 = docAcroForm.getField("dm2");
-           PDField da1h1 = docAcroForm.getField("da1");
-           PDField da2h1 = docAcroForm.getField("da2");
-           PDField da3h1 = docAcroForm.getField("da3");
-           PDField da4h1 = docAcroForm.getField("da4");
-           
-           //hijo2
-           PDField nh2 = docAcroForm.getField("tBoxH2");
-           PDField lnh2 = docAcroForm.getField("tBoxHNac2");
-           
-           // digitos de nacimiento hijo 2
-           PDField dd1h2 = docAcroForm.getField("dd1h2");
-           PDField dd2h2 = docAcroForm.getField("dd2h2");
-           PDField dm1h2 = docAcroForm.getField("dm1h2");
-           PDField dm2h2 = docAcroForm.getField("dm2h2");
-           PDField da1h2 = docAcroForm.getField("da1h2");
-           PDField da2h2 = docAcroForm.getField("da2h2");
-           PDField da3h2 = docAcroForm.getField("da3h2");
-           PDField da4h2 = docAcroForm.getField("da4h2");
-           
-           //hijo3
-           PDField nh3 = docAcroForm.getField("tBoxH3");
-           PDField lnh3 = docAcroForm.getField("tBoxHNac3");
-           
-           // digitos de nacimiento hijo 3
-           PDField dd1h3 = docAcroForm.getField("dd1h3");
-           PDField dd2h3 = docAcroForm.getField("dd2h3");
-           PDField dm1h3 = docAcroForm.getField("dm1h3");
-           PDField dm2h3 = docAcroForm.getField("dm2h3");
-           PDField da1h3 = docAcroForm.getField("da1h3");
-           PDField da2h3 = docAcroForm.getField("da2h3");
-           PDField da3h3 = docAcroForm.getField("da3h3");
-           PDField da4h3 = docAcroForm.getField("da4h3");
-           
-           //hijo4
-           PDField nh4 = docAcroForm.getField("tBoxH4");
-           PDField lnh4 = docAcroForm.getField("tBoxHNac4");
-           
-           // digitos de nacimiento hijo 4
-           PDField dd1h4 = docAcroForm.getField("dd1h4");
-           PDField dd2h4 = docAcroForm.getField("dd2h4");
-           PDField dm1h4 = docAcroForm.getField("dm1h4");
-           PDField dm2h4 = docAcroForm.getField("dm2h4");
-           PDField da1h4 = docAcroForm.getField("da1h4");
-           PDField da2h4 = docAcroForm.getField("da2h4");
-           PDField da3h4 = docAcroForm.getField("da3h4");
-           PDField da4h4 = docAcroForm.getField("da4h4");
-           
-           //hijo5
-           PDField nh5 = docAcroForm.getField("tBoxH5");
-           PDField lnh5 = docAcroForm.getField("tBoxHNac5");
-           
-           // digitos de nacimiento hijo 5
-           PDField dd1h5 = docAcroForm.getField("dd1h5");
-           PDField dd2h5 = docAcroForm.getField("dd2h5");
-           PDField dm1h5 = docAcroForm.getField("dm1h5");
-           PDField dm2h5 = docAcroForm.getField("dm2h5");
-           PDField da1h5 = docAcroForm.getField("da1h5");
-           PDField da2h5 = docAcroForm.getField("da2h5");
-           PDField da3h5 = docAcroForm.getField("da3h5");
-           PDField da4h5 = docAcroForm.getField("da4h5");
-           
-           
            tboxConsulado.setValue(persona.getConsulado());
            tboxNom.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -566,96 +484,6 @@ public class ControllerMainFrame implements ActionListener {
            tBoxTC2.setValue(this.vista.campoTC2.getText());
            tBoxEC2.setValue(this.vista.campoCorreoC2.getText());
            
-           tBoxConyuge.setValue(this.vista.campoCony.getText().toUpperCase());
-           
-           tBoxProgenitores.setValue(this.vista.campoNomP.getText().toUpperCase() + ", " + this.vista.campoNomM.getText().toUpperCase());
-           
-           nh1.setValue(this.vista.campoNH1.getText().toUpperCase());
-           lnh1.setValue(this.vista.campoLNH1.getText().toUpperCase());
-           
-           if (this.vista.campoFNH1.getDate() != null) {
-               SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
-               String fechaN1 = sdf.format(this.vista.campoFNH1.getDate());
-
-               dd1h1.setValue(String.valueOf(fechaN1.charAt(0)));
-               dd2h1.setValue(String.valueOf(fechaN1.charAt(1)));
-               dm1h1.setValue(String.valueOf(fechaN1.charAt(2)));
-               dm2h1.setValue(String.valueOf(fechaN1.charAt(3)));
-               da1h1.setValue(String.valueOf(fechaN1.charAt(4)));
-               da2h1.setValue(String.valueOf(fechaN1.charAt(5)));
-               da3h1.setValue(String.valueOf(fechaN1.charAt(6)));
-               da4h1.setValue(String.valueOf(fechaN1.charAt(7)));
-           }
-           
-           nh2.setValue(this.vista.campoNH2.getText().toUpperCase());
-           lnh2.setValue(this.vista.campoLNH2.getText().toUpperCase());
-           
-           if (this.vista.campoFNH2.getDate() != null) {
-               SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
-               String fechaN2 = sdf.format(this.vista.campoFNH2.getDate());
-
-               dd1h2.setValue(String.valueOf(fechaN2.charAt(0)));
-               dd2h2.setValue(String.valueOf(fechaN2.charAt(1)));
-               dm1h2.setValue(String.valueOf(fechaN2.charAt(2)));
-               dm2h2.setValue(String.valueOf(fechaN2.charAt(3)));
-               da1h2.setValue(String.valueOf(fechaN2.charAt(4)));
-               da2h2.setValue(String.valueOf(fechaN2.charAt(5)));
-               da3h2.setValue(String.valueOf(fechaN2.charAt(6)));
-               da4h2.setValue(String.valueOf(fechaN2.charAt(7)));
-           }
-           
-           nh3.setValue(this.vista.campoNH3.getText().toUpperCase());
-           lnh3.setValue(this.vista.campoLNH3.getText().toUpperCase());
-           
-           if (this.vista.campoFNH3.getDate() != null) {
-               SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
-               String fechaN3 = sdf.format(this.vista.campoFNH3.getDate());
-
-               dd1h3.setValue(String.valueOf(fechaN3.charAt(0)));
-               dd2h3.setValue(String.valueOf(fechaN3.charAt(1)));
-               dm1h3.setValue(String.valueOf(fechaN3.charAt(2)));
-               dm2h3.setValue(String.valueOf(fechaN3.charAt(3)));
-               da1h3.setValue(String.valueOf(fechaN3.charAt(4)));
-               da2h3.setValue(String.valueOf(fechaN3.charAt(5)));
-               da3h3.setValue(String.valueOf(fechaN3.charAt(6)));
-               da4h3.setValue(String.valueOf(fechaN3.charAt(7)));
-           }
-           
-           nh4.setValue(this.vista.campoNH4.getText().toUpperCase());
-           lnh4.setValue(this.vista.campoLNH4.getText().toUpperCase());
-           
-           if (this.vista.campoFNH4.getDate() != null) {
-               SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
-               String fechaN4 = sdf.format(this.vista.campoFNH4.getDate());
-
-               dd1h4.setValue(String.valueOf(fechaN4.charAt(0)));
-               dd2h4.setValue(String.valueOf(fechaN4.charAt(1)));
-               dm1h4.setValue(String.valueOf(fechaN4.charAt(2)));
-               dm2h4.setValue(String.valueOf(fechaN4.charAt(3)));
-               da1h4.setValue(String.valueOf(fechaN4.charAt(4)));
-               da2h4.setValue(String.valueOf(fechaN4.charAt(5)));
-               da3h4.setValue(String.valueOf(fechaN4.charAt(6)));
-               da4h4.setValue(String.valueOf(fechaN4.charAt(7)));
-           }
-           
-           nh5.setValue(this.vista.campoNH5.getText().toUpperCase());
-           lnh5.setValue(this.vista.campoLNH5.getText().toUpperCase());
-           
-           if (this.vista.campoFNH5.getDate() != null) {
-               SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
-               String fechaN5 = sdf.format(this.vista.campoFNH5.getDate());
-
-               dd1h5.setValue(String.valueOf(fechaN5.charAt(0)));
-               dd2h5.setValue(String.valueOf(fechaN5.charAt(1)));
-               dm1h5.setValue(String.valueOf(fechaN5.charAt(2)));
-               dm2h5.setValue(String.valueOf(fechaN5.charAt(3)));
-               da1h5.setValue(String.valueOf(fechaN5.charAt(4)));
-               da2h5.setValue(String.valueOf(fechaN5.charAt(5)));
-               da3h5.setValue(String.valueOf(fechaN5.charAt(6)));
-               da4h5.setValue(String.valueOf(fechaN5.charAt(7)));
-           }
-           
-           
            docSoli.save(this.crearCarpeta(persona) + "/SolicitudInscripcionResidente.pdf");
            docSoli.close();
            
@@ -710,22 +538,8 @@ public class ControllerMainFrame implements ActionListener {
         this.vista.campoTomo.setText("");
         this.vista.campoPagina.setText("");
         this.vista.campoNroPag.setText("");
-        this.vista.campoCony.setText("");
-        this.vista.campoNH1.setText("");
-        this.vista.campoNH2.setText("");
-        this.vista.campoNH3.setText("");
-        this.vista.campoNH4.setText("");
-        this.vista.campoNH5.setText("");
-        this.vista.campoLNH1.setText("");
-        this.vista.campoLNH2.setText("");
-        this.vista.campoLNH3.setText("");
-        this.vista.campoLNH4.setText("");
-        this.vista.campoLNH5.setText("");
-        this.vista.campoFNH1.setDate(null);
-        this.vista.campoFNH2.setDate(null);
-        this.vista.campoFNH3.setDate(null);
-        this.vista.campoFNH4.setDate(null);
-        this.vista.campoFNH5.setDate(null);
+        this.vista.campoNombreTutor.setText("");
+        this.vista.campoDomTut.setText("");
         this.vista.campoTC1.setText("+54 9");
         this.vista.campoTC2.setText("+54 9");
         this.vista.campoCorreoC1.setText("");
