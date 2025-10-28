@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
@@ -26,7 +25,6 @@ import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
-import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDRadioButton;
 
@@ -42,9 +40,6 @@ public class ControllerMainFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             Persona personaIngresada = this.captureAttribs();
-            this.completarAnexoV(personaIngresada);
-            this.completarAnexoIII(personaIngresada);
-            this.completarAnexoI(personaIngresada);
             this.completarHojaInscripcion(personaIngresada);
             this.completarDeclaracion(personaIngresada);
             this.completarSolInsc(personaIngresada);
@@ -112,257 +107,8 @@ public class ControllerMainFrame implements ActionListener {
         
         return persona;
     }
-    
-    private boolean completarAnexoV(Persona persona) throws URISyntaxException {
-       boolean ok = false;
-       try {
-           byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/anexo5c.pdf")));       
-           PDDocument docOrig = Loader.loadPDF(byteArray);
-           PDAcroForm docAcroForm = docOrig.getDocumentCatalog().getAcroForm();
-           PDField tboxFormulado = docAcroForm.getField("campoFormulado");
-           PDField tboxNombres = docAcroForm.getField("campoNombre");
-           PDField tboxAM = docAcroForm.getField("campoAM");
-           PDField tboxAP = docAcroForm.getField("campoAP");
-           PDField tboxNac = docAcroForm.getField("campoNacionalidad");
-           PDField tboxEC = docAcroForm.getField("campoEC");
-           PDField tboxDNI = docAcroForm.getField("campoDNI");
-           PDField tboxDom = docAcroForm.getField("campoDom");
-           PDField tboxProv = docAcroForm.getField("campoProv");
-           PDField tboxPais = docAcroForm.getField("campoPais");
-           PDField tboxTelefono = docAcroForm.getField("campoTelefono");
-           PDField tboxEmail = docAcroForm.getField("campoMail");
-           PDField tboxConsulado = docAcroForm.getField("campoConsulado");
-           PDField tboxDiaTurno = docAcroForm.getField("diaTurno");
-           PDField tboxMesTurno = docAcroForm.getField("mesTurno");
-           PDField tboxAgnoTurno = docAcroForm.getField("agnoTurno");
-           PDField tboxDiaTurno2 = docAcroForm.getField("diaTurno2");
-           PDField tboxMesTurno2 = docAcroForm.getField("mesTurno2");
-           PDField tboxAgnoTurno2 = docAcroForm.getField("agnoTurno2");
-           PDField tboxConsulado2 = docAcroForm.getField("campoConsulado2");
-           
-           tboxFormulado.setValue(persona.getNombres());
-           tboxNombres.setValue(persona.getNombres());
-           tboxAM.setValue(persona.getApellidoMaterno());
-           tboxAP.setValue(persona.getApellidoPaterno());
-           tboxNac.setValue(persona.getNacionalidad());
-           tboxEC.setValue(persona.getEstadoCivil());
-           tboxDNI.setValue("DNI: " + persona.getDNI());
-           
-           if (!(persona.getAltura().isBlank())) {
-               if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
-               } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
-               }
-           } else {
-               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
-           }
-           
-           
-           tboxProv.setValue(persona.getProvincia());
-           tboxPais.setValue(persona.getPais());
-           tboxTelefono.setValue(persona.getTelefono());
-           tboxEmail.setValue(persona.getEmail());
-           tboxConsulado.setValue(persona.getConsulado());
-            
-           LocalDate fechaTurno = LocalDate.parse(persona.getFechaTurno());
-           
-           tboxDiaTurno.setValue(fechaTurno.getDayOfMonth() + "");
-           tboxMesTurno.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
-           tboxAgnoTurno.setValue(fechaTurno.getYear() + "");
-           
-           tboxDiaTurno2.setValue(fechaTurno.getDayOfMonth() + "");
-           tboxMesTurno2.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
-           tboxAgnoTurno2.setValue(fechaTurno.getYear() + "");
-           
-           tboxConsulado2.setValue(persona.getConsulado());
-           
-           docOrig.save(this.crearCarpeta(persona) + "/Anexo5.pdf");
-           docOrig.close();
-           
-           ok = true;
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
-       return ok;
-    }
-    
-    private boolean completarAnexoIII(Persona persona) throws URISyntaxException {
-        boolean ok = false;
-        
-        try {
-           byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/anexo3.pdf")));       
-           PDDocument docAnexo3 = Loader.loadPDF(byteArray);
-           PDAcroForm docAcroForm = docAnexo3.getDocumentCatalog().getAcroForm();
-           PDField tboxRC = docAcroForm.getField("campoRC");
-           PDField tboxNombres = docAcroForm.getField("campoNombre");
-           PDField tboxAM = docAcroForm.getField("campoAM");
-           PDField tboxAP = docAcroForm.getField("campoAP");
-           PDField tboxNac = docAcroForm.getField("campoNacionalidad");
-           PDField tboxEC = docAcroForm.getField("campoEC");
-           PDField tboxDNI = docAcroForm.getField("campoDNI");
-           PDField tboxDom = docAcroForm.getField("campoDom");
-           PDField tboxProv = docAcroForm.getField("campoProv");
-           PDField tboxPais = docAcroForm.getField("campoPais");
-           PDField tboxTelefono = docAcroForm.getField("campoTelefono");
-           PDField tboxEmail = docAcroForm.getField("campoMail");
-           PDField tboxConsulado = docAcroForm.getField("campoConsulado");
-           PDField checkComun = docAcroForm.getField("checkComun");
-           PDField tboxProgInscrito = docAcroForm.getField("Progenitor");
-           PDField tboxFechaOpcion = docAcroForm.getField("FechaOpcion");
-           PDField check1 = docAcroForm.getField("Casilla de verificación 10");
-           PDField check2 = docAcroForm.getField("Casilla de verificación 11");
-           PDField check3 = docAcroForm.getField("Casilla de verificación 12");
-           PDField check4 = docAcroForm.getField("Casilla de verificación 13");
-           PDField tboxOtros = docAcroForm.getField("Otros documentos");
-           PDField tboxDiaTurno = docAcroForm.getField("FirmaDIA");
-           PDField tboxMesTurno = docAcroForm.getField("FirmaMES");
-           PDField tboxAgnoTurno = docAcroForm.getField("FirmaAÑO");
-           
-           
-           tboxRC.setValue(persona.getConsulado());
-           tboxNombres.setValue(persona.getNombres());
-           tboxAM.setValue(persona.getApellidoMaterno());
-           tboxAP.setValue(persona.getApellidoPaterno());
-           tboxNac.setValue(persona.getNacionalidad());
-           tboxEC.setValue(persona.getEstadoCivil());
-           tboxDNI.setValue("DNI: " + persona.getDNI());
-           
-           if (!(persona.getAltura().isBlank())) {
-               if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
-               } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
-               }
-           } else {
-               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
-           }
-           
-           tboxProv.setValue(persona.getProvincia());
-           tboxProgInscrito.setValue("ROSARIO");
-           
-           SimpleDateFormat fromUser = new SimpleDateFormat("yyyy-MM-dd");
-           SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-           try {
-               tboxFechaOpcion.setValue(sdf.format(fromUser.parse(persona.getFechaTurno())));
-           } catch (ParseException e) {
-                e.printStackTrace();
-           }
-           
-           tboxPais.setValue(persona.getPais());
-           tboxTelefono.setValue(persona.getTelefono());
-           tboxEmail.setValue(persona.getEmail());
-           tboxConsulado.setValue(persona.getConsulado());
-           
-           LocalDate fechaTurno = LocalDate.parse(persona.getFechaTurno());
-           
-           
-           tboxDiaTurno.setValue(fechaTurno.getDayOfMonth() + "");
-           tboxMesTurno.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
-           tboxAgnoTurno.setValue(fechaTurno.getYear() + "");
-           
-           ((PDCheckBox) checkComun).check();
-           ((PDCheckBox) check1).check();
-           ((PDCheckBox) check2).check();
-           ((PDCheckBox) check3).check();
-           ((PDCheckBox) check4).check();
-           
-           if (this.vista.combo1.getSelectedItem().toString().equals("SI")) {
-               tboxOtros.setValue("ACTA DE MATRIMONIO DE LOS PROGENITORES");
-           } else {
-               tboxOtros.setValue("ACTA DE NACIMIENTO DEL PROGENITOR NO ESPAÑOL");
-           }
-           
-           
-           
-           docAnexo3.save(this.crearCarpeta(persona) + "/Anexo3.pdf");
-           docAnexo3.close();
-           ok = true;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return ok;
-    }
-    
-    private boolean completarAnexoI(Persona persona) throws URISyntaxException {
-        boolean ok = false;
-        
-        try {
-           byte[] byteArray = IOUtils.toByteArray((this.getClass().getResourceAsStream("/pdf/anexo1.pdf")));       
-           PDDocument docAnexo1 = Loader.loadPDF(byteArray);
-           PDAcroForm docAcroForm = docAnexo1.getDocumentCatalog().getAcroForm();
-           PDField tboxRC = docAcroForm.getField("campoRC");
-           PDField tboxNombres = docAcroForm.getField("campoNombre");
-           PDField tboxAM = docAcroForm.getField("campoAM");
-           PDField tboxAP = docAcroForm.getField("campoAP");
-           PDField tboxNac = docAcroForm.getField("campoNacionalidad");
-           PDField tboxEC = docAcroForm.getField("campoEC");
-           PDField tboxDNI = docAcroForm.getField("campoDNI");
-           PDField tboxDom = docAcroForm.getField("campoDom");
-           PDField tboxProv = docAcroForm.getField("campoProv");
-           PDField tboxPais = docAcroForm.getField("campoPais");
-           PDField tboxTelefono = docAcroForm.getField("campoTelefono");
-           PDField tboxEmail = docAcroForm.getField("campoMail");
-           PDField tboxConsulado = docAcroForm.getField("campoConsulado");
-           PDField checkComun = docAcroForm.getField("checkComun");
-           PDField checkD1 = docAcroForm.getField("checkD1");
-           PDField checkD2 = docAcroForm.getField("checkD2");
-           PDField checkD3 = docAcroForm.getField("checkD3");
-           PDField checkD4 = docAcroForm.getField("checkD4");
-           PDField checkD5 = docAcroForm.getField("checkD5");
-           PDField tboxAbuelo = docAcroForm.getField("Taextfield-6");
-           PDField tboxDiaTurno = docAcroForm.getField("Texto1aa");
-           PDField tboxMesTurno = docAcroForm.getField("Texto1ss");
-           PDField tboxAgnoTurno = docAcroForm.getField("Texto1dd");
-           
-           tboxRC.setValue(persona.getConsulado());
-           tboxNombres.setValue(persona.getNombres());
-           tboxAM.setValue(persona.getApellidoMaterno());
-           tboxAP.setValue(persona.getApellidoPaterno());
-           tboxNac.setValue(persona.getNacionalidad());
-           tboxEC.setValue(persona.getEstadoCivil());
-           tboxDNI.setValue("DNI: " + persona.getDNI());
-           
-           if (!(persona.getAltura().isBlank())) {
-               if (!(persona.getPiso().isBlank())) {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + " PISO " + persona.getPiso() + ", " + persona.getCiudad());
-               } else {
-                   tboxDom.setValue(persona.getCalle() + " " + persona.getAltura() + ", " + persona.getCiudad());
-               }
-           } else {
-               tboxDom.setValue(persona.getCalle() + ", " + persona.getCiudad());
-           }
-           
-           tboxProv.setValue(persona.getProvincia());
-           tboxPais.setValue(persona.getPais());
-           tboxTelefono.setValue(persona.getTelefono());
-           tboxEmail.setValue(persona.getEmail());
-           tboxConsulado.setValue(persona.getConsulado());
-           ((PDCheckBox) checkComun).check();
-           ((PDCheckBox) checkD1).check();
-           ((PDCheckBox) checkD2).check();
-           ((PDCheckBox) checkD3).check();
-           ((PDCheckBox) checkD4).check();
-           ((PDCheckBox) checkD5).check();
-           tboxAbuelo.setValue("ESPAÑOLA");
-           
-           LocalDate fechaTurno = LocalDate.parse(persona.getFechaTurno());
-           
-           tboxDiaTurno.setValue(fechaTurno.getDayOfMonth() + "");
-           tboxMesTurno.setValue(fechaTurno.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")).toUpperCase());
-           tboxAgnoTurno.setValue(fechaTurno.getYear() + "");
-           
-           docAnexo1.save(this.crearCarpeta(persona) + "/Anexo1.pdf");
-           docAnexo1.close();
-           ok = true;
-           
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        return ok;
-    }
-    
+
+
     private boolean completarHojaInscripcion (Persona persona) throws URISyntaxException {
         boolean ok = true;
         
