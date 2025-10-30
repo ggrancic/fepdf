@@ -192,11 +192,14 @@ public class ControllerMainFrame implements ActionListener {
            
            if (persona.getSexo().equals("MASCULINO")) {
                ((PDCheckBox) checkM).check();
-               tboxInt.setValue("INTERESADO");
+               //tboxInt.setValue("INTERESADO");
            } else {
                ((PDCheckBox) checkF).check();
-               tboxInt.setValue("INTERESADA");
+               //tboxInt.setValue("INTERESADA");
            }
+           
+           tboxInt.setValue(this.vista.comboDeclarante.getSelectedItem().toString());
+           
            SimpleDateFormat sdfn = new SimpleDateFormat("yyyy-MM-dd");
            String formateada = sdfn.format(this.vista.getCampoFN().getDate());
            LocalDate fechaNacimiento = LocalDate.parse(formateada);
@@ -252,9 +255,9 @@ public class ControllerMainFrame implements ActionListener {
            ecnm.setValue(this.vista.comboEcNacM.getSelectedItem().toString().toUpperCase());
            ecam.setValue(this.vista.comboEcAcM.getSelectedItem().toString().toUpperCase());
            
-           tboxDeclarante.setValue(this.vista.campoNombreTutor.getText().trim());
+           tboxDeclarante.setValue(this.vista.campoNombreTutor.getText().trim().toUpperCase());
            tboxNac.setValue(persona.getPais());
-           tboxFN.setValue(persona.getFechaNacimiento());
+           tboxFN.setValue(this.vista.fechaNacimientoTutor.getDate().toString());
            
            tboxDom.setValue(this.vista.campoDomTut.getText().trim());
            
@@ -262,7 +265,7 @@ public class ControllerMainFrame implements ActionListener {
            tboxCP.setValue(this.vista.campoCP.getText());
            tboxTel.setValue(this.vista.campoTelTut.getText().trim());
            tboxMail.setValue(this.vista.campoEmailTut.getText().trim());
-           tboxDNI.setValue("DNI: " + persona.getDNI());
+           tboxDNI.setValue("DNI: " + this.vista.campoDniTutor.getText().trim());
            tboxCons.setValue(persona.getConsulado());
            tboxLN.setValue(persona.getCiudadNacimiento() + ", " + persona.getProvinciaNacimiento() + ", " + persona.getPaisNacimiento());
            
