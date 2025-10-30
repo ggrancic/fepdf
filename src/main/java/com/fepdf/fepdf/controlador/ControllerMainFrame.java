@@ -257,8 +257,10 @@ public class ControllerMainFrame implements ActionListener {
            
            tboxDeclarante.setValue(this.vista.campoNombreTutor.getText().trim().toUpperCase());
            tboxNac.setValue(persona.getPais());
-           tboxFN.setValue(this.vista.fechaNacimientoTutor.getDate().toString());
            
+           
+           
+           tboxFN.setValue(df.format(this.vista.fechaNacimientoTutor.getDate()));
            tboxDom.setValue(this.vista.campoDomTut.getText().trim());
            
            // 
@@ -421,6 +423,11 @@ public class ControllerMainFrame implements ActionListener {
            PDField tBoxEC2 = docAcroForm.getField("tBoxEC2");
            PDField tBoxDC2 = docAcroForm.getField("tBoxDC2");
            
+           PDField tBoxNomTut = docAcroForm.getField("Texto10");
+           PDField tBoxDni = docAcroForm.getField("Texto 11");
+           PDField tBoxCalidad = docAcroForm.getField("Texto 12");
+           PDField checkProgenitor = docAcroForm.getField("Progenitora");
+           
            tboxConsulado.setValue(persona.getConsulado());
            tboxNom.setValue(persona.getNombres());
            tboxA1.setValue(persona.getApellidoPaterno());
@@ -486,6 +493,11 @@ public class ControllerMainFrame implements ActionListener {
            tBoxDC2.setValue(this.vista.campoDC2.getText().toUpperCase());
            tBoxTC2.setValue(this.vista.campoTC2.getText());
            tBoxEC2.setValue(this.vista.campoCorreoC2.getText());
+           
+           tBoxNomTut.setValue(this.vista.campoNombreTutor.getText().trim().toUpperCase());
+           tBoxDni.setValue(this.vista.campoDniTutor.getText().trim());
+           tBoxCalidad.setValue(this.vista.comboDeclarante.getSelectedItem().toString());
+           ((PDCheckBox) checkProgenitor).check();
            
            docSoli.save(this.crearCarpeta(persona) + "/SolicitudInscripcionResidente.pdf");
            docSoli.close();
