@@ -424,8 +424,8 @@ public class ControllerMainFrame implements ActionListener {
            PDField tBoxDC2 = docAcroForm.getField("tBoxDC2");
            
            PDField tBoxNomTut = docAcroForm.getField("Texto10");
-           PDField tBoxDni = docAcroForm.getField("Texto 11");
-           PDField tBoxCalidad = docAcroForm.getField("Texto 12");
+           PDField tBoxDni = docAcroForm.getField("Texto11");
+           PDField tBoxCalidad = docAcroForm.getField("Texto12");
            PDField checkProgenitor = docAcroForm.getField("Progenitora");
            
            tboxConsulado.setValue(persona.getConsulado());
